@@ -37,10 +37,20 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 │           └── informatica_2.md # Prompt calibrado para Informática II (C++ embebido, NXP LPC845).
 ├── CODEOWNERS                   # Definición de responsables y mantenedores por módulo.
 ├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones y política de Fair Use.
+├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
 ```
 
 ## Uso Responsable y Derechos de Autor (Fair Use)
 Estos perfiles obligan a la IA a actuar como un **tutor socrático**: te guía en la arquitectura, pero el código fino o el cálculo lo pensás vos. 
 **Importante:** Está estrictamente prohibido incluir material con derechos de autor (enunciados textuales de parciales, guías oficiales, PDFs de la cátedra). Todo el contenido debe ser reformulado. Como verán arriba, va a haber tests automáticos así que la IA va a poder darse cuenta del contenido :)
+
+## Licencia
+
+Este proyecto está bajo la licencia **[Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)](LICENSE)**.
+
+* **Atribución (BY)**: Debes dar crédito apropiado al proyecto original.
+* **No Comercial (NC)**: Queda estrictamente prohibida la comercialización, venta o uso con fines de lucro directos o indirectos de este material.
+* **Sin Derivadas (ND)**: Queda prohibida la redistribución pública de versiones modificadas o alteradas de estos archivos sin autorización expresa de los mantenedores del repositorio.
+
 
