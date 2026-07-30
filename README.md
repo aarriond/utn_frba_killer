@@ -32,9 +32,13 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 │   │   └── validar_estructura.yml # Pipeline de CI que valida el cumplimiento de las 6 secciones obligatorias.
 │   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
 ├── materias/
-│   └── electronica/             # Especialidad / Carrera (ej. Ingeniería Electrónica)
-│       └── nivel_2/             # Nivel o año de la carrera (2º Nivel)
-│           └── informatica_2.md # Prompt calibrado para Informática II (C++ embebido, NXP LPC845).
+│   ├── electronica/             # Carrera / Especialidad: Ingeniería Electrónica
+│   │   ├── nivel_1/             # 1º Nivel (ej. informatica_1.md)
+│   │   └── nivel_2/             # 2º Nivel (ej. informatica_2.md - C++ embebido, NXP LPC845)
+│   ├── sistemas/                # Carrera / Especialidad: Ingeniería en Sistemas de Información
+│   │   └── nivel_2/             # 2º Nivel (ej. sintaxis_y_lenguajes.md)
+│   └── quimica/                 # Carrera / Especialidad: Ingeniería Química
+│       └── nivel_1/             # 1º Nivel (ej. quimica_general.md)
 ├── CODEOWNERS                   # Definición de responsables y mantenedores por módulo.
 ├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones y política de Fair Use.
 ├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
