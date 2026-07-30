@@ -1,0 +1,45 @@
+name: Propuesta de nueva materia
+description: Sugerir e iniciar la creación de los System Prompts para una nueva materia
+title: "Propuesta: [Nombre de la Materia]"
+labels: ["propuesta", "nueva-materia"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por proponer el prompt para una nueva materia! Por favor completa la siguiente información.
+  - type: input
+    id: materia
+    attributes:
+      label: Nombre de la Materia
+      description: Ejemplo - Informática II, Electrónica Aplicada I, etc.
+      placeholder: "Ej: Electrónica Aplicada I"
+    validations:
+      required: true
+  - type: dropdown
+    id: nivel
+    attributes:
+      label: Nivel / Año de la Carrera
+      options:
+        - "Nivel 1"
+        - "Nivel 2"
+        - "Nivel 3"
+        - "Nivel 4"
+        - "Nivel 5"
+        - "Electiva"
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción y Foco Pedagógico
+      description: Resume brevemente los temas principales y las particularidades de la materia.
+      placeholder: "Foco en C++ embebido, LPC845, POO y patrones..."
+    validations:
+      required: true
+  - type: checkbox
+    id: fair_use
+    attributes:
+      label: Compromiso de Uso Responsable y Fair Use
+      options:
+        - label: Confirmo que no se incluirá material con derechos de autor (enunciados textuales de parciales, guías oficiales, etc.).
+          required: true

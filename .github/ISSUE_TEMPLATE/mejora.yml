@@ -1,0 +1,26 @@
+name: Propuesta de Mejora
+description: Sugerir mejoras o ajustes a un prompt ya existente
+title: "Mejora: [Nombre de la Materia] - Descripción breve"
+labels: ["mejora", "enhancement"]
+body:
+  - type: input
+    id: materia
+    attributes:
+      label: Materia a mejorar
+      placeholder: "Ej: nivel_2/informatica_2.md"
+    validations:
+      required: true
+  - type: textarea
+    id: justificacion
+    attributes:
+      label: Justificación de la mejora
+      description: ¿Por qué es beneficioso este cambio para el aprendizaje de los alumnos?
+    validations:
+      required: true
+  - type: textarea
+    id: cambios_propuestos
+    attributes:
+      label: Cambios propuestos
+      description: Detalla las secciones y contenidos que sugerís modificar o ampliar.
+    validations:
+      required: true

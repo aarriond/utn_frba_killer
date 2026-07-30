@@ -1,0 +1,54 @@
+name: Validar Estructura de Prompts
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validar_estructura:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validar 6 Secciones Obligatorias en archivos .md de niveles
+        run: |
+          python -c '
+          import os, sys
+
+          required_sections = [
+              "1. Identidad y Contexto",
+              "2. Alcance y Límites",
+              "3. Reglas Pedagógicas y de Formato",
+              "4. Convenciones de Hardware / Entorno",
+              "5. Directivas de Uso Responsable y Prevención de Atajos",
+              "6. Prompts de Inicio"
+          ]
+
+          errors = []
+          for root, dirs, files in os.walk("."):
+              if "nivel_" in root:
+                  for file in files:
+                      if file.endswith(".md"):
+                          filepath = os.path.join(root, file)
+                          with open(filepath, "r", encoding="utf-8") as f:
+                              content = f.read()
+                          for sec in required_sections:
+                              if sec not in content:
+                                  errors.append(f"[{filepath}] Falta la sección obligatoria: \"{sec}\"")
+
+          if errors:
+              print("ERRORES ENCONTRADOS EN LA ESTRUCTURA:")
+              for err in errors:
+                  print(" - " + err)
+              sys.exit(1)
+          else:
+              print("¡Todos los prompts cumplen con las 6 secciones obligatorias!")
+          '

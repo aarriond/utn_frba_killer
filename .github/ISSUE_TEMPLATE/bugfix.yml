@@ -1,0 +1,34 @@
+name: Reporte de Error (Bugfix)
+description: Reportar una falla, inconsistencia o atajo detectado en un prompt existente
+title: "Bug: [Nombre de la Materia] - Descripción breve"
+labels: ["bug", "necesita-revision"]
+body:
+  - type: input
+    id: materia
+    attributes:
+      label: Materia afectada
+      placeholder: "Ej: nivel_2/informatica_2.md"
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion_bug
+    attributes:
+      label: Descripción del problema
+      description: ¿Qué comportamiento indeseado o atajo genera el prompt?
+      placeholder: "La IA devuelve código C puro en lugar de C++ o entrega soluciones completas..."
+    validations:
+      required: true
+  - type: textarea
+    id: pasos_reproducir
+    attributes:
+      label: Pasos o prompt de prueba para reproducir
+      description: Indica qué entrada del usuario provocó el fallo en la IA.
+    validations:
+      required: false
+  - type: textarea
+    id: solucion_sugerida
+    attributes:
+      label: Solución o ajuste sugerido
+      description: ¿Qué regla o sección del prompt debería ser modificada?
+    validations:
+      required: false
