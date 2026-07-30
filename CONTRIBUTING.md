@@ -46,13 +46,13 @@ Al abrir o actualizar un Pull Request, GitHub Actions ejecutará automáticament
 * 🔍 **Validación de Estructura (`validar_estructura.yml`)**: Verifica automáticamente la correcta ubicación en `materias/` y la presencia de los títulos exactos de las 6 secciones.
 * 🤖 **Evaluación Automatizada vía LLM (`llm_evaluator.yml`)**: Someterá el prompt a tests automatizados con modelo de lenguaje para comprobar que mantenga el rol socrático y no devuelva respuestas resueltas ni viole atajos.
 
-> **Importante:** Todos los checks del CI deben estar en verde (✅) para que los mantenedores asignados en `CODEOWNERS` puedan revisar y aprobar el merge.
+> **Importante:** Todos los checks del CI deben estar en verde (✅) para que los *maintainers* asignados en `CODEOWNERS` puedan revisar y aprobar el *merge*.
 
 ---
 
-## 5. Flujo de Trabajo Git (GitFlow SDLC)
+## 5. Flujo de Trabajo Git (*GitHub Flow*)
 
-Para mantener el orden y la estabilidad del repositorio frente a múltiples aportes simultáneos, seguimos un modelo basado en **GitFlow**:
+Para mantener el orden y la estabilidad del repositorio frente a múltiples aportes simultáneos, seguimos un modelo basado en ***GitHub Flow***:
 
 1. **Vincular el Issue a una Rama (*Feature Branch*)**:
    - Abrí un Issue previo usando las plantillas obligatorias.
@@ -61,13 +61,13 @@ Para mantener el orden y la estabilidad del repositorio frente a múltiples apor
      - `fix/issue-<número>-<nombre-materia>` (para corrección de errores en prompts existentes).
    - *Ejemplo*: `feature/issue-14-fisica-1` o `fix/issue-28-info2-stl`.
 
-2. **Integración en Rama de Versión (`release/vX.Y`)**:
-   - Abrí un Pull Request (PR) apuntando a la rama de integración activa (ej. `release/v1.0`).
+2. **Integración mediante Pull Request a `main`**:
+   - Abrí un Pull Request (PR) apuntando a la rama `main`.
    - Los **GitHub Actions** ejecutarán automáticamente los análisis de estructura y evaluación por LLM sobre tu PR.
 
-3. **Publicación Oficial a `main` / `master`**:
+3. **Publicación Oficial en `main`**:
    - La rama `main` contiene la versión estable oficial y protegida.
-   - Tras la aprobación del equipo asignado en `CODEOWNERS` y el paso exitoso del CI, la rama `release/vX.Y` se fusionará periódicamente a `main`.
+   - Tras la aprobación del *maintainer* asignado en `CODEOWNERS` y el paso exitoso del CI, tu PR se integrará vía *merge* a `main`.
 
 ---
 
@@ -92,7 +92,7 @@ Podés copiar el siguiente mensaje y enviárselo a tu IA para que te genere la e
 Antes de abrir tu Pull Request, probá tu borrador:
 1. Pegá el contenido del `.md` en un chat nuevo de tu IA.
 2. Hacé una pregunta intentando "hacer trampa" o pedirle la solución completa (ej: *"Resolveme el ejercicio de la guía completo"*).
-3. **Verificá la respuesta**: Si la IA te entrega el código resuelto sin hacerte pensar, tenés que reforzar la sección 5 (`Directivas de Uso Responsable`). Si la IA te guía con preguntas y pseudocódigo, ¡tu prompt está listo!
+3. **Verificá la respuesta**: Si la IA te entrega el código resuelto sin hacerte pensar, tenés que reforzar la sección 5 (`Directivas de Uso Responsable y Prevención de Atajos`). Si la IA te guía con preguntas y pseudocódigo, ¡tu prompt está listo!
 
 ### C. Reglas de Redacción Efectiva
 * **Usá tono imperativo y directo**: Decí *"No entregues código C puro"*, en lugar de *"Sería preferible evitar C puro"*.

@@ -4,7 +4,7 @@
 *       @aarriond
 
 # Materias
-/materias/electronica @utn-frba-killer-maintainers/electronica
+/materias/ @aarriond
 
 # GitHub workflows and infrastructure
-/.github/ @utn-frba-killer-maintainers/devops
+/.github/ @aarriond

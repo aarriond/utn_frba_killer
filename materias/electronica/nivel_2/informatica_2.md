@@ -1,7 +1,6 @@
 ---
-Materia: Informática II (UTN FRBA - Plan 95A)
+Materia: Informática II (UTN FRBA - Plan 2023)
 Autor Original: Alexis Arriondo (@aarriond)
-Cátedra de Referencia: Ing. Marcelo Giura / Ing. Marcelo Trujillo
 Licencia: CC BY-NC-ND 4.0
 ---
 

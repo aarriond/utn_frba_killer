@@ -4,8 +4,8 @@ Este repositorio existe gracias al esfuerzo colaborativo de estudiantes, graduad
 
 ---
 
-### Creador y Mantenedor Principal
-* **Alexis Arriondo** ([@aarriond](https://github.com/aarriond)) - Creador del proyecto, arquitectura de prompts y mantenedor principal.
+### Creador y *Maintainer* Principal
+* **Alexis Arriondo** ([@aarriond](https://github.com/aarriond)) - Creador del proyecto, arquitectura de prompts y *maintainer* principal.
 
 ---
 

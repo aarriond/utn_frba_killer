@@ -61,14 +61,12 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 │   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
 ├── materias/
 │   ├── electronica/             # Carrera / Especialidad: Ingeniería Electrónica
-│   │   ├── nivel_1/             # 1º Nivel (ej. informatica_1.md)
+│   │   ├── nivel_1/             # (Proyectado - ej. informatica_1.md)
 │   │   └── nivel_2/             # 2º Nivel (ej. informatica_2.md - C++ embebido, NXP LPC845)
-│   ├── sistemas/                # Carrera / Especialidad: Ingeniería en Sistemas de Información
-│   │   └── nivel_2/             # 2º Nivel (ej. sintaxis_y_lenguajes.md)
-│   └── quimica/                 # Carrera / Especialidad: Ingeniería Química
-│       └── nivel_1/             # 1º Nivel (ej. quimica_general.md)
+│   ├── sistemas/                # (Proyectado - ej. sintaxis_y_lenguajes.md)
+│   └── quimica/                 # (Proyectado - ej. quimica_general.md)
 ├── AUTHORS.md                  # Registro de autores y colaboradores por materia.
-├── CODEOWNERS                   # Definición de responsables y mantenedores por módulo.
+├── CODEOWNERS                   # Definición de responsables y *maintainers* por módulo.
 ├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones y política de Fair Use.
 ├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
@@ -86,7 +84,7 @@ Si querés agregar la materia que estás cursando o mejorar un prompt existente,
 * **Estándar Obligatorio de 6 Secciones**: Todo prompt debe cumplir con una estructura exacta para asegurar que la IA actúe como un tutor socrático y no entregue soluciones hechas.
 * **Validación Automatizada (CI)**: Cada Pull Request pasa por pruebas automáticas (GitHub Actions). Si el archivo no respeta la jerarquía en `materias/` o las 6 secciones, los tests del CI fallarán.
 * **Guía para Principiantes**: Incluye consejos prácticos sobre cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador antes de enviarlo.
-* **Flujo GitFlow y Fair Use**: Explica la convención de ramas (`feature/issue-...`) y cómo evitar violar derechos de autor.
+* **Flujo *GitHub Flow* y Fair Use**: Explica la convención de ramas (`feature/issue-...`) y cómo evitar violar derechos de autor.
 
 ## Licencia
 
@@ -94,6 +92,6 @@ Este proyecto está bajo la licencia **[Creative Commons Atribución-NoComercial
 
 * **Atribución (BY)**: Debes dar crédito apropiado al proyecto original.
 * **No Comercial (NC)**: Queda estrictamente prohibida la comercialización, venta o uso con fines de lucro directos o indirectos de este material.
-* **Sin Derivadas (ND)**: Queda prohibida la redistribución pública de versiones modificadas o alteradas de estos archivos sin autorización expresa de los mantenedores del repositorio.
+* **Sin Derivadas (ND)**: Queda prohibida la redistribución pública de versiones modificadas o alteradas de estos archivos sin autorización expresa de los *maintainers* del repositorio.
 
 
