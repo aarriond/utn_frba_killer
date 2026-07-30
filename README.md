@@ -67,6 +67,7 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 │   │   └── nivel_2/             # 2º Nivel (ej. sintaxis_y_lenguajes.md)
 │   └── quimica/                 # Carrera / Especialidad: Ingeniería Química
 │       └── nivel_1/             # 1º Nivel (ej. quimica_general.md)
+├── AUTHORS.md                  # Registro de autores y colaboradores por materia.
 ├── CODEOWNERS                   # Definición de responsables y mantenedores por módulo.
 ├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones y política de Fair Use.
 ├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
