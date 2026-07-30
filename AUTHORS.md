@@ -14,6 +14,7 @@ Este repositorio existe gracias al esfuerzo colaborativo de estudiantes, graduad
 #### 🔹 Ingeniería Electrónica
 * **Informática II** (`materias/electronica/nivel_2/informatica_2.md`):
   - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
+  - **Otros Autores**: -
 
 ---
 

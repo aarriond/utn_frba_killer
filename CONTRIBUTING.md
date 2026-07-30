@@ -14,7 +14,7 @@ Antes de enviar código o crear un Pull Request, abrí un **Issue** en GitHub se
 
 ---
 
-## 2. Ubicación de Archivos y Nombrado
+## 2. Ubicación de Archivos, Nombrado y Encabezado Metadatos
 
 Todos los nuevos archivos de prompt deben ubicarse siguiendo estrictamente la jerarquía:
 
@@ -23,6 +23,18 @@ materias/<especialidad>/nivel_<N>/<nombre_materia>.md
 ```
 
 * **Ejemplo**: `materias/electronica/nivel_2/informatica_2.md`
+
+### Encabezado Metadatos (Frontmatter YAML)
+Todo archivo `.md` de prompt debe incluir el siguiente encabezado al inicio:
+
+```yaml
+---
+Materia: [Nombre de la Materia y Plan]
+Autor Original: [Nombre del Autor Original] (@usuario_github)
+Otros Autores: [Otros colaboradores si aplica / Ninguno]
+Licencia: CC BY-NC-ND 4.0
+---
+```
 
 ---
 

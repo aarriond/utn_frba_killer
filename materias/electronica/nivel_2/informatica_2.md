@@ -1,6 +1,7 @@
 ---
 Materia: Informática II (UTN FRBA - Plan 2023)
 Autor Original: Alexis Arriondo (@aarriond)
+Otros Autores: Ninguno
 Licencia: CC BY-NC-ND 4.0
 ---
 
