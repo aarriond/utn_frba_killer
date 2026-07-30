@@ -33,10 +33,9 @@ jobs:
           ]
 
           errors = []
-          for root, dirs, files in os.walk("."):
-              if "nivel_" in root:
-                  for file in files:
-                      if file.endswith(".md"):
+          for root, dirs, files in os.walk("materias"):
+              for file in files:
+                  if file.endswith(".md"):
                           filepath = os.path.join(root, file)
                           with open(filepath, "r", encoding="utf-8") as f:
                               content = f.read()

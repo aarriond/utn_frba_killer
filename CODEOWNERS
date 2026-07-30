@@ -3,8 +3,8 @@
 # Default owners for all files in repository
 *       @utn-frba-electronica/maintainers
 
-# Nivel directories maintenance
-/nivel_2/ @utn-frba-electronica/nivel-2-maintainers
+# Materias maintenance
+/materias/ @utn-frba-electronica/maintainers
 
 # GitHub workflows and infrastructure
 /.github/ @utn-frba-electronica/devops

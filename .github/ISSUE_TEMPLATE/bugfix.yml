@@ -7,7 +7,7 @@ body:
     id: materia
     attributes:
       label: Materia afectada
-      placeholder: "Ej: nivel_2/informatica_2.md"
+      placeholder: "Ej: materias/electronica/nivel_2/informatica_2.md"
     validations:
       required: true
   - type: textarea

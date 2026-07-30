@@ -31,8 +31,10 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 │   │   ├── llm_evaluator.yml    # Pipeline de CI para evaluación automatizada de prompts.
 │   │   └── validar_estructura.yml # Pipeline de CI que valida el cumplimiento de las 6 secciones obligatorias.
 │   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
-├── nivel_2/
-│   └── informatica_2.md         # Contexto/System Prompt calibrado para Informática II (C++ embebido, NXP LPC845).
+├── materias/
+│   └── electronica/             # Especialidad / Carrera (ej. Ingeniería Electrónica)
+│       └── nivel_2/             # Nivel o año de la carrera (2º Nivel)
+│           └── informatica_2.md # Prompt calibrado para Informática II (C++ embebido, NXP LPC845).
 ├── CODEOWNERS                   # Definición de responsables y mantenedores por módulo.
 ├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones y política de Fair Use.
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
@@ -40,5 +42,5 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 
 ## Uso Responsable y Derechos de Autor (Fair Use)
 Estos perfiles obligan a la IA a actuar como un **tutor socrático**: te guía en la arquitectura, pero el código fino o el cálculo lo pensás vos. 
-**Importante:** Está estrictamente prohibido incluir material con derechos de autor (enunciados textuales de parciales, guías oficiales, PDFs de la cátedra). Todo el contenido debe ser reformulado.
+**Importante:** Está estrictamente prohibido incluir material con derechos de autor (enunciados textuales de parciales, guías oficiales, PDFs de la cátedra). Todo el contenido debe ser reformulado. Como verán arriba, va a haber tests automáticos así que la IA va a poder darse cuenta del contenido :)
 
