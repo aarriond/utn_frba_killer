@@ -18,6 +18,27 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 * **Perplexity:** Armá una nueva Collection y pegalo en AI Prompt.
 * **Grok:** Pegalo íntegro como el primer mensaje del chat.
 
+## Estructura del Repositorio
+
+```text
+.
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bugfix.yml           # Plantilla para reportar correcciones en prompts existentes.
+│   │   ├── mejora.yml           # Plantilla para sugerir optimizaciones o ajustes pedagógicos.
+│   │   └── propuesta.yml        # Plantilla para proponer la incorporación de una nueva materia.
+│   ├── workflows/
+│   │   ├── llm_evaluator.yml    # Pipeline de CI para evaluación automatizada de prompts.
+│   │   └── validar_estructura.yml # Pipeline de CI que valida el cumplimiento de las 6 secciones obligatorias.
+│   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
+├── nivel_2/
+│   └── informatica_2.md         # Contexto/System Prompt calibrado para Informática II (C++ embebido, NXP LPC845).
+├── CODEOWNERS                   # Definición de responsables y mantenedores por módulo.
+├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones y política de Fair Use.
+└── README.md                    # Documentación general e instrucciones de uso del proyecto.
+```
+
 ## Uso Responsable y Derechos de Autor (Fair Use)
 Estos perfiles obligan a la IA a actuar como un **tutor socrático**: te guía en la arquitectura, pero el código fino o el cálculo lo pensás vos. 
 **Importante:** Está estrictamente prohibido incluir material con derechos de autor (enunciados textuales de parciales, guías oficiales, PDFs de la cátedra). Todo el contenido debe ser reformulado.
+
