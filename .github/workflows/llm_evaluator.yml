@@ -1,7 +1,15 @@
 name: Evaluador LLM (Red Teaming)
 
 on:
+  workflow_dispatch:
+    inputs:
+      enable_api:
+        description: 'Habilitar llamadas a la API de Gemini (consume cuota)'
+        required: false
+        type: boolean
+        default: true
   pull_request:
+    branches: [ main ]
     types: [opened, synchronize, reopened]
 
 jobs:
@@ -11,9 +19,14 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Simulación de Pruebas de Red Teaming sobre Prompts
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Ejecutar Suite de Red Teaming contra Gemini API
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ENABLE_RED_TEAMING: ${{ inputs.enable_api && 'true' || 'false' }}
         run: |
-          echo "Ejecutando evaluador automático de seguridad y adherencia a Uso Responsable..."
-          echo "Verificando prevención de atajos y fair use..."
-          # Integración con suite de evaluación Red Teaming para validar comportamiento de IAs
-          echo "Pruebas de Red Teaming completadas exitosamente."
+          python tests/test_red_teaming.py

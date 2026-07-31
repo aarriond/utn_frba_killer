@@ -1,10 +1,10 @@
-# CODEOWNERS file for Prompts de Electrónica UTN FRBA
+# CODEOWNERS file for Prompts de UTN FRBA KILLER
 
 # Default owners for all files in repository
-*       @utn-frba-electronica/maintainers
+*       @aarriond
 
-# Nivel directories maintenance
-/nivel_2/ @utn-frba-electronica/nivel-2-maintainers
+# Materias
+/materias/ @aarriond
 
 # GitHub workflows and infrastructure
-/.github/ @utn-frba-electronica/devops
+/.github/ @aarriond
