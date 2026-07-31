@@ -1,0 +1,9 @@
+# Feedback local privado y notas de calibración
+FEEDBACK.md
+FEEDBACK_LOCAL.md
+feedback/
+
+# Archivos de entorno y logs
+*.log
+.DS_Store
+Thumbs.db

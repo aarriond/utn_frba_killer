@@ -1,5 +1,5 @@
 # Antes de nada, ¿por qué el nombre?
-No tengo una pregunta completa, pero se entiende: en algún momento pensás en que te querés recibir ya...
+No tengo una respuesta completa para esta pregunta porque es difícil ponerle un nombre, pero se entiende: en algún momento pensás en que te querés recibir ya... Aunque cueste liquidar materias ;)
 
 # Prompts de Ingeniería UTN FRBA
 Este repositorio es una iniciativa *open-source* para recopilar y estandarizar **System Prompts (contextos de IA)** para las distintas carreras de Ingeniería en la UTN FRBA (Electrónica, Sistemas, Química, Mecánica, Industrial, Civil, Eléctrica, etc.).
@@ -13,7 +13,9 @@ Sin un perfil calibrado, las IAs de propósito general (como ChatGPT, Claude, Ge
 Al inyectar estos archivos `.md`, transformamos a la IA en un **Tutor Socrático Exigente** que:
 1. **Orienta mediante preguntas clave y pseudocódigo** en lugar de entregar la solución terminada.
 2. **Exige al alumno razonar el 'por qué'** de cada algoritmo, cálculo o decisión de diseño.
-3. **Mantiene el rigor universitario y los convenios de cada carrera** en la UTN FRBA:
+3. **Mantiene el rigor universitario y los convenios de cada carrera** en la UTN FRBA.
+
+#### 🎯 Ejemplos de calibración por especialidad
 
 * **Ingeniería Electrónica (*Informática I* vs *Informática II*):**
   Evita que la IA confunda C puro con C++ POO bare-metal, impidiendo el uso descontrolado de librerías de alto nivel (STL / `std::vector`) o asignación dinámica (`new`/`delete`) donde se requiere manipulación directa de registros del microcontrolador (ej. NXP LPC845).
@@ -37,6 +39,16 @@ Delegar la resolución completa de un ejercicio en la inteligencia artificial ge
 > 📌 **La Regla de Oro del Repositorio:** Usá la IA como un acelerador de comprensión (para consultar conceptos, pedir pseudocódigo o entender por qué falla un error), **NUNCA para saltearte el proceso de pensar**.
 
 En resumen: **La IA no hace el trabajo por vos; actúa como un tutor experto que te guía para que aprendas, apruebes y seas ingeniero, demostrando que la IA es una herramienta valiosa para ser más eficiente y no que sea prácticamente una dependencia de lo que sabés (o no).**
+
+## 💡 ¿Qué es un archivo `.md` y por qué usamos este formato?
+
+Un archivo `.md` (**Markdown**) es simplemente un archivo de texto plano formateado con símbolos sencillos (como `#` para títulos o `*` para viñetas).
+
+**Usamos este formato porque:**
+* **Las IAs lo entienden nativamente:** La estructura en Markdown ayuda a la IA a distinguir con alta precisión cuáles son las reglas, los límites y las directivas del tutor.
+* **Sin programas especiales ni licencias:** Podés abrirlo y leerlo desde cualquier navegador, bloc de notas, celular o editor de código.
+* **Fácil de copiar y reutilizar:** Solo tenés que copiar todo el texto plano e ingresarlo en las instrucciones del sistema de tu IA preferida.
+* **Control transparente en GitHub:** Permite que cualquier estudiante o docente pueda proponer mejoras, corregir errores y seguir el historial de cambios de forma abierta.
 
 ## 🚀 Guía de Importación Paso a Paso por Plataforma
 
