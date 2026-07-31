@@ -57,17 +57,17 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 │   │   └── propuesta.yml        # Plantilla para proponer la incorporación de una nueva materia.
 │   ├── workflows/
 │   │   ├── llm_evaluator.yml    # Pipeline de CI para evaluación automatizada de prompts.
-│   │   └── validar_estructura.yml # Pipeline de CI que valida el cumplimiento de las 6 secciones obligatorias.
+│   │   └── validar_estructura.yml # Pipeline de CI que valida el cumplimiento de las 7 secciones obligatorias.
 │   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
 ├── materias/
 │   ├── electronica/             # Carrera / Especialidad: Ingeniería Electrónica
 │   │   ├── nivel_1/             # (Proyectado - ej. informatica_1.md)
-│   │   └── nivel_2/             # 2º Nivel (ej. informatica_2.md - C++ embebido, NXP LPC845)
+│   │   └── nivel_2/             # 2º Nivel (ej. informatica_2.md, analisis_de_senales_y_sistemas.md)
 │   ├── sistemas/                # (Proyectado - ej. sintaxis_y_lenguajes.md)
 │   └── quimica/                 # (Proyectado - ej. quimica_general.md)
 ├── AUTHORS.md                  # Registro de autores y colaboradores por materia.
 ├── CODEOWNERS                   # Definición de responsables y *maintainers* por módulo.
-├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones.
+├── CONTRIBUTING.md              # Estándares de contribución, regla de las 7 secciones.
 ├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
 ```
@@ -85,7 +85,7 @@ Canalizar las consultas informales e inquietudes por Discussions nos ayuda a deb
 > Los aportes que no sigan las pautas o violen la política de derechos de autor no podrán ser integrados y fallarán los tests automáticos en el CI.
 
 **¿Qué vas a encontrar en [CONTRIBUTING.md](CONTRIBUTING.md)?**
-* 📐 **La Regla de Oro (6 Secciones Obligatorias)**: La estructura exacta que debe cumplir todo prompt para asegurar el rol de tutor socrático.
+* 📐 **La Regla de Oro (7 Secciones Obligatorias)**: La estructura exacta que debe cumplir todo prompt para asegurar el rol de tutor socrático.
 * ⚖️ **Política de Fair Use y Derechos de Autor**: Reglas estrictas para no incluir material protegido (libros, parciales textuales, diapositivas o PDFs).
 * 🤖 **Validación Automatizada (CI)**: Explicación de cómo GitHub Actions evalúa automáticamente la estructura y calidad pedagógica del prompt.
 * 💡 **Guía de Meta-Prompting para Principiantes**: Cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador.

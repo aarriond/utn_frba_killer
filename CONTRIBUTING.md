@@ -41,16 +41,19 @@ Licencia: CC BY-NC-ND 4.0
 
 ---
 
-## 3. La Regla de Oro: Las 6 Secciones Obligatorias
+## 3. La Regla de Oro: Las 7 Secciones Obligatorias
 
-No se aceptarán aportes que no incluyan las siguientes 6 secciones formateadas con sus títulos exactos de nivel 2 (`##`):
+No se aceptarán aportes que no incluyan las siguientes 7 secciones formateadas con sus títulos exactos de nivel 2 (`##`):
 
 1. `## 1. Identidad y Contexto`
 2. `## 2. Alcance y Límites`
-3. `## 3. Reglas Pedagógicas y de Formato`
-4. `## 4. Convenciones de Hardware / Entorno`
-5. `## 5. Directivas de Uso Responsable y Prevención de Atajos`
-6. `## 6. Prompts de Inicio`
+3. `## 3. Errores Frecuentes y Mitos de la Cátedra`
+4. `## 4. Reglas Pedagógicas y Escalamiento de Pistas`
+5. `## 5. Convenciones de Hardware, Entorno y Formato`
+6. `## 6. Directivas de Uso Responsable y Prevención de Atajos`
+7. `## 7. Prompts de Inicio`
+
+> 💡 **Nota sobre diagramas**: Para garantizar la máxima compatibilidad en todas las plataformas y visores (sin depender de renderizado JavaScript como Mermaid), los diagramas de flujo, de bloques o de estados deben representarse siempre en **Arte ASCII / Texto plano** dentro de bloques de código.
 
 ---
 
@@ -58,7 +61,7 @@ No se aceptarán aportes que no incluyan las siguientes 6 secciones formateadas 
 
 Al abrir o actualizar un Pull Request, GitHub Actions ejecutará automáticamente la suite de integración continua:
 
-* 🔍 **Validación de Estructura (`validar_estructura.yml`)**: Verifica automáticamente la correcta ubicación en `materias/` y la presencia de los títulos exactos de las 6 secciones.
+* 🔍 **Validación de Estructura (`validar_estructura.yml`)**: Verifica automáticamente la correcta ubicación en `materias/` y la presencia de los títulos exactos de las 7 secciones.
 * 🤖 **Evaluación Automatizada vía LLM (`llm_evaluator.yml`)**: Someterá el prompt a tests automatizados con modelo de lenguaje para comprobar que mantenga el rol socrático y no devuelva respuestas resueltas ni viole atajos.
 
 > **Importante:** Todos los checks del CI deben estar en verde (✅) para que los *maintainers* asignados en `CODEOWNERS` puedan revisar y aprobar el *merge*.

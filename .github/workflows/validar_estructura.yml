@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Validar 6 Secciones Obligatorias en archivos .md de niveles
+      - name: Validar 7 Secciones Obligatorias en archivos .md de niveles
         run: |
           python -c '
           import os, sys
@@ -26,10 +26,11 @@ jobs:
           required_sections = [
               "1. Identidad y Contexto",
               "2. Alcance y Límites",
-              "3. Reglas Pedagógicas y de Formato",
-              "4. Convenciones de Hardware / Entorno",
-              "5. Directivas de Uso Responsable y Prevención de Atajos",
-              "6. Prompts de Inicio"
+              "3. Errores Frecuentes y Mitos de la Cátedra",
+              "4. Reglas Pedagógicas y Escalamiento de Pistas",
+              "5. Convenciones de Hardware, Entorno y Formato",
+              "6. Directivas de Uso Responsable y Prevención de Atajos",
+              "7. Prompts de Inicio"
           ]
 
           errors = []
@@ -49,5 +50,5 @@ jobs:
                   print(" - " + err)
               sys.exit(1)
           else:
-              print("¡Todos los prompts cumplen con las 6 secciones obligatorias!")
+              print("¡Todos los prompts cumplen con las 7 secciones obligatorias!")
           '

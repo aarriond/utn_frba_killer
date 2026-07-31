@@ -15,6 +15,9 @@ Este repositorio existe gracias al esfuerzo colaborativo de estudiantes, graduad
 * **Informática II** (`materias/electronica/nivel_2/informatica_2.md`):
   - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
   - **Otros Autores**: -
+* **Análisis de Señales y Sistemas** (`materias/electronica/nivel_2/analisis_de_senales_y_sistemas.md`):
+  - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
+  - **Otros Autores**: -
 
 ---
 
