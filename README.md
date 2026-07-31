@@ -1,5 +1,5 @@
 # Antes de nada, ¿por qué el nombre?
-No tengo una pregunta completa, pero se entiende: en algún momento pensás en que te querés recibir ya...
+No tengo una respuesta completa, pero se entiende: en algún momento pensás en que te querés recibir ya...
 
 # Prompts de Ingeniería UTN FRBA
 Este repositorio es una iniciativa *open-source* para recopilar y estandarizar **System Prompts (contextos de IA)** para las distintas carreras de Ingeniería en la UTN FRBA (Electrónica, Sistemas, Química, Mecánica, Industrial, Civil, Eléctrica, etc.).
