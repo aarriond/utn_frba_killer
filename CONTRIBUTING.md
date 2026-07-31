@@ -13,6 +13,7 @@ Antes de enviar código o crear un Pull Request, abrí un **Issue** en GitHub se
 
 * **Propuesta de nueva materia**: Para proponer la creación de un nuevo prompt (ej. *Electrónica Aplicada I*).
 * **Propuesta de Mejora**: Para sugerir calibraciones, ajustes pedagógicos o adición de reglas a un prompt existente.
+* **Propuesta de Mito / Error Frecuente (Sección 3)**: Para aportar errores comunes, conceptos equivocados o trampas típicas vividas en la cursada.
 * **Reporte de Error (Bugfix)**: Para notificar comportamiento indeseado de la IA (ej. si entrega soluciones completas, usa C puro en vez de C++, o se salta directivas socráticas).
 
 ---

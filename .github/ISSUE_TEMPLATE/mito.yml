@@ -1,0 +1,40 @@
+name: Propuesta de Mito / Error Frecuente
+description: Aportar un mito, error típico o confusión recurrente de la cursada para enriquecer la Sección 3 de un prompt
+title: "Mito: [Nombre de la Materia] - Breve descripción del error común"
+labels: ["mito", "seccion-3", "comunidad"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por contribuir con la experiencia real de la cursada! La Sección 3 de cada prompt es un documento vivo que se nutre de los errores más comunes cometidos en parciales, TP y finales.
+  - type: input
+    id: materia
+    attributes:
+      label: Materia Afectada
+      placeholder: "Ej: materias/electronica/nivel_2/analisis_de_senales_y_sistemas.md"
+    validations:
+      required: true
+  - type: textarea
+    id: mito_afirmacion
+    attributes:
+      label: Afirmación Falsa o Mito Recurrente
+      description: ¿Qué suele creer o asumir erróneamente el estudiante?
+      placeholder: "Ej: 'Creer que para calcular la DFT en MatLab aumentando el padding de ceros aumenta la resolución física de la señal en frecuencia'."
+    validations:
+      required: true
+  - type: textarea
+    id: explicacion_tecnica
+    attributes:
+      label: Explicación Técnica Correcta
+      description: ¿Por qué es conceptualmente incorrecto y cómo debe razonarlo el estudiante?
+      placeholder: "Ej: El zero padding suaviza el gráfico pero no cambia la resolución frecuencial física, que depende exclusivamente de la ventana de tiempo N*Ts..."
+    validations:
+      required: true
+  - type: textarea
+    id: orientacion_tutor
+    attributes:
+      label: ¿Cómo debería orientarlo el Tutor Socrático?
+      description: Pregunta o pista que la IA debería hacer cuando detecte esta confusión.
+      placeholder: "Ej: Preguntar al alumno: '¿De qué parámetro depende la distancia entre deltas en frecuencia al tomar una ventana de tiempo T?'"
+    validations:
+      required: false
