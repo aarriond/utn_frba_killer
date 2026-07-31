@@ -2,7 +2,7 @@
 *Explicá brevemente qué materia agregaste o qué cambiaste.*
 
 ### Checklist Obligatorio
-- [ ] Respeté los títulos exactos de las 6 secciones del estándar.
+- [ ] Respeté los títulos exactos de las 7 secciones del estándar.
 - [ ] No incluí enunciados literales de la cátedra ni material con copyright.
 - [ ] Guardé el archivo `.md` en la ruta `materias/<especialidad>/nivel_<N>/` correspondiente.
 - [ ] (Opcional) Issue asociado: #___

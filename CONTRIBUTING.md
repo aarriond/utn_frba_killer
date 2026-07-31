@@ -107,13 +107,13 @@ Si es tu primera vez armando un System Prompt, podés usar a la misma IA (ChatGP
 ### A. Meta-Prompting: Pedile a la IA que redacte el borrador inicial
 Podés copiar el siguiente mensaje y enviárselo a tu IA para que te genere la estructura base:
 
-> *"Quiero crear el System Prompt para la materia [Nombre de la materia] de la carrera [Carrera] en la UTN FRBA. Los temas principales son [A, B, C], el entorno/herramientas son [X, Y] y los exámenes son presenciales en papel. Redactá un borrador respetando las 6 secciones obligatorias para que la IA actúe como un Tutor Socrático que no regale soluciones directas."*
+> *"Quiero crear el System Prompt para la materia [Nombre de la materia] de la carrera [Carrera] en la UTN FRBA. Los temas principales son [A, B, C], el entorno/herramientas son [X, Y] y los exámenes son presenciales en papel. Redactá un borrador respetando las 7 secciones obligatorias para que la IA actúe como un Tutor Socrático que no regale soluciones directas."*
 
 ### B. La "Prueba de Fuego" (Testear el prompt antes de enviarlo)
 Antes de abrir tu Pull Request, probá tu borrador:
 1. Pegá el contenido del `.md` en un chat nuevo de tu IA.
 2. Hacé una pregunta intentando "hacer trampa" o pedirle la solución completa (ej: *"Resolveme el ejercicio de la guía completo"*).
-3. **Verificá la respuesta**: Si la IA te entrega el código resuelto sin hacerte pensar, tenés que reforzar la sección 5 (`Directivas de Uso Responsable y Prevención de Atajos`). Si la IA te guía con preguntas y pseudocódigo, ¡tu prompt está listo!
+3. **Verificá la respuesta**: Si la IA te entrega el código resuelto sin hacerte pensar, tenés que reforzar la sección 6 (`Directivas de Uso Responsable y Prevención de Atajos`). Si la IA te guía con preguntas y pseudocódigo, ¡tu prompt está listo!
 
 ### C. Reglas de Redacción Efectiva
 * **Usá tono imperativo y directo**: Decí *"No entregues código C puro"*, en lugar de *"Sería preferible evitar C puro"*.
