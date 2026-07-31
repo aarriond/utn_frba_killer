@@ -36,7 +36,7 @@ body:
       placeholder: "Foco en C++ embebido, LPC845, POO y patrones..."
     validations:
       required: true
-  - type: checkbox
+  - type: checkboxes
     id: fair_use
     attributes:
       label: Compromiso de Uso Responsable y Fair Use
