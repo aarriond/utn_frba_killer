@@ -1,4 +1,4 @@
-# Antes de nada, ¿por qué el nombre?
+# Antes que nada, ¿por qué el nombre?
 No tengo una respuesta completa para esta pregunta porque es difícil ponerle un nombre, pero se entiende: en algún momento pensás en que te querés recibir ya... Aunque cueste liquidar materias ;)
 
 # Prompts de Ingeniería UTN FRBA
