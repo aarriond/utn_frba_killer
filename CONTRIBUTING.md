@@ -55,6 +55,8 @@ No se aceptarán aportes que no incluyan las siguientes 7 secciones formateadas 
 7. `## 7. Prompts de Inicio`
 
 > 💡 **Nota sobre diagramas**: Para garantizar la máxima compatibilidad en todas las plataformas y visores (sin depender de renderizado JavaScript como Mermaid), los diagramas de flujo, de bloques o de estados deben representarse siempre en **Arte ASCII / Texto plano** dentro de bloques de código.
+> 
+> 💡 **Nota sobre la Sección 6 (Guardrail Anti Off-Topic y Ahorro de Tokens)**: Todo prompt debe incluir en la Sección 6 una cláusula explícita de delimitación de ámbito para exigir que la IA decline en máximo 2 oraciones cualquier pregunta ajena al programa analítico (evitando dilución de instrucciones y desperdicio de tokens).
 
 ---
 

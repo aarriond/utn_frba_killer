@@ -109,6 +109,7 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 ├── AUTHORS.md                  # Registro de autores y colaboradores por materia.
 ├── CODEOWNERS                   # Definición de responsables y *maintainers* por módulo.
 ├── CONTRIBUTING.md              # Estándares de contribución, regla de las 7 secciones.
+├── FEEDBACK.md                  # Registro privado de calibraciones de forma de la IA.
 ├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
 ```
