@@ -67,24 +67,29 @@ Copiá el contenido del archivo `.md` de tu materia y pegalo en tu IA preferida:
 │   └── quimica/                 # (Proyectado - ej. quimica_general.md)
 ├── AUTHORS.md                  # Registro de autores y colaboradores por materia.
 ├── CODEOWNERS                   # Definición de responsables y *maintainers* por módulo.
-├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones y política de Fair Use.
+├── CONTRIBUTING.md              # Estándares de contribución, regla de las 6 secciones.
 ├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
 ```
 
-## Uso Responsable y Derechos de Autor (Fair Use)
-Estos perfiles obligan a la IA a actuar como un **tutor socrático**: te guía en la arquitectura, pero el código fino o el cálculo lo pensás vos. 
-**Importante:** Está estrictamente prohibido incluir material con derechos de autor (enunciados textuales de parciales, guías oficiales, PDFs de la cátedra). Todo el contenido debe ser reformulado. Como verán arriba, va a haber tests automáticos así que la IA va a poder darse cuenta del contenido :)
+## 💬 Consultas, Preguntas e Ideas: GitHub Discussions
 
-## ¿Querés Contribuir? ¡Es fundamental leer el [CONTRIBUTING.md](CONTRIBUTING.md)!
+Si tenés alguna duda general sobre el proyecto, preguntas sobre cómo usar los prompts o querés proponer una idea previa antes de abrir un Issue que quizás no prospere, **utilizá el espacio de [GitHub Discussions](../../discussions)**. 
 
-Si querés agregar la materia que estás cursando o mejorar un prompt existente, **es imprescindible que leas la [Guía de Contribución (CONTRIBUTING.md)](CONTRIBUTING.md)** antes de abrir un Issue o Pull Request.
+Canalizar las consultas informales e inquietudes por Discussions nos ayuda a debatir abiertamente y mantener la sección de **Issues** reservada exclusivamente para tareas concretas y aprobadas.
 
-**¿Por qué es tan importante?**
-* **Estándar Obligatorio de 6 Secciones**: Todo prompt debe cumplir con una estructura exacta para asegurar que la IA actúe como un tutor socrático y no entregue soluciones hechas.
-* **Validación Automatizada (CI)**: Cada Pull Request pasa por pruebas automáticas (GitHub Actions). Si el archivo no respeta la jerarquía en `materias/` o las 6 secciones, los tests del CI fallarán.
-* **Guía para Principiantes**: Incluye consejos prácticos sobre cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador antes de enviarlo.
-* **Flujo *GitHub Flow* y Fair Use**: Explica la convención de ramas (`feature/issue-...`) y cómo evitar violar derechos de autor.
+## 🤝 ¿Querés Contribuir? ¡Leé la Guía de Contribución!
+
+> [!IMPORTANT]
+> **Antes de abrir un Issue o Pull Request, es obligatorio leer la [Guía de Contribución (CONTRIBUTING.md)](CONTRIBUTING.md).**  
+> Los aportes que no sigan las pautas o violen la política de derechos de autor no podrán ser integrados y fallarán los tests automáticos en el CI.
+
+**¿Qué vas a encontrar en [CONTRIBUTING.md](CONTRIBUTING.md)?**
+* 📐 **La Regla de Oro (6 Secciones Obligatorias)**: La estructura exacta que debe cumplir todo prompt para asegurar el rol de tutor socrático.
+* ⚖️ **Política de Fair Use y Derechos de Autor**: Reglas estrictas para no incluir material protegido (libros, parciales textuales, diapositivas o PDFs).
+* 🤖 **Validación Automatizada (CI)**: Explicación de cómo GitHub Actions evalúa automáticamente la estructura y calidad pedagógica del prompt.
+* 💡 **Guía de Meta-Prompting para Principiantes**: Cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador.
+* 🌿 **Flujo de Git (*GitHub Flow*)**: Convención de ramas (`feature/issue-...`) y flujo de integración vía PR a `main`.
 
 ## Licencia
 

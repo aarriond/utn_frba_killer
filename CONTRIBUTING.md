@@ -6,6 +6,9 @@ Para mantener la calidad y consistencia pedagógica de los System Prompts en **P
 
 ## 1. Uso Obligatorio de Plantillas de Issues
 
+> 💬 **¿Tenés una duda o propuesta en etapa temprana?**  
+> Antes de abrir un Issue que quizás no prospere, te recomendamos usar el espacio de **[GitHub Discussions](../../discussions)** para consultas generales o ideas informales.
+
 Antes de enviar código o crear un Pull Request, abrí un **Issue** en GitHub seleccionando una de nuestras plantillas estructuradas (*Issue Templates*):
 
 * **Propuesta de nueva materia**: Para proponer la creación de un nuevo prompt (ej. *Electrónica Aplicada I*).
@@ -85,9 +88,12 @@ Para mantener el orden y la estabilidad del repositorio frente a múltiples apor
 
 ## 6. Política de Fair Use y Derechos de Autor
 
-Está **estrictamente prohibido** incluir material protegido por derechos de autor (enunciados textuales de parciales, diapositivas oficiales o PDFs de la cátedra). 
+Está **estrictamente prohibido** incluir material protegido por derechos de autor (libros, enunciados textuales de parciales, diapositivas oficiales o PDFs de la cátedra) salvo autorización expresa. 
 
 Todo el contenido debe ser redactado con palabras propias o reformulado cambiando valores y escenarios.
+
+> 💡 **¿Por qué se pide esto?**  
+> El material producido por docentes, ayudantes y alumnos es su trabajo intelectual y debemos respetarlo. Además, el propósito de este proyecto no es ser un repositorio de información ni una vía rápida para hacer *speedrun* de una cátedra, sino ofrecer una guía basada en la planificación oficial y las experiencias de cursada para acompañar el aprendizaje.
 
 ---
 
