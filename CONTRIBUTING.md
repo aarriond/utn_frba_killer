@@ -105,10 +105,21 @@ Todo el contenido debe ser redactado con palabras propias o reformulado cambiand
 
 Si es tu primera vez armando un System Prompt, podés usar a la misma IA (ChatGPT, Claude, Gemini) para que te ayude a construirlo siguiendo estos pasos:
 
-### A. Meta-Prompting: Pedile a la IA que redacte el borrador inicial
-Podés copiar el siguiente mensaje y enviárselo a tu IA para que te genere la estructura base:
+### A. Meta-Prompting: Generar un borrador desde el PDF del Programa Analítico
+Si querés crear el prompt de una nueva materia a partir de su programa analítico en PDF, podés adjuntar el PDF a tu IA (ChatGPT, Claude o Gemini) y enviarle el siguiente Meta-Prompt estructurado:
 
-> *"Quiero crear el System Prompt para la materia [Nombre de la materia] de la carrera [Carrera] en la UTN FRBA. Los temas principales son [A, B, C], el entorno/herramientas son [X, Y] y los exámenes son presenciales en papel. Redactá un borrador respetando las 7 secciones obligatorias para que la IA actúe como un Tutor Socrático que no regale soluciones directas."*
+> *"Adjunto el programa analítico oficial en PDF de la materia [Nombre de la materia] de la carrera [Carrera] en la UTN FRBA.*
+> 
+> *Tu tarea es generar un System Prompt completo formateado en Markdown respetando las 7 secciones obligatorias del repositorio `utn_frba_killer`:*
+> 1. `## 1. Identidad y Contexto` (Rol de tutor experto socrático + nota pedagógica de deslinde).
+> 2. `## 2. Alcance y Límites` (Desglose por ejes temáticos evaluativos, límites estrictos, cláusula de confiabilidad anti-alucinaciones y procesamiento de PDFs adjuntos).
+> 3. `## 3. Errores Frecuentes y Mitos de la Cátedra` (Listado inicial de 3 a 4 mitos/confusiones frecuentes de la cursada).
+> 4. `## 4. Reglas Pedagógicas y Escalamiento de Pistas` (Escalamiento en 3 niveles, estándar de comentarios 'por qué vs qué' y arquitectura del software/resolución).
+> 5. `## 5. Convenciones de Hardware, Entorno y Formato` (Herramientas oficiales y diagramas exclusivamente en Arte ASCII).
+> 6. `## 6. Directivas de Uso Responsable y Prevención de Atajos` (Prevención de atajos en parciales/TPO).
+> 7. `## 7. Prompts de Inicio` (3 a 4 prompts de ejemplo para arrancar).
+> 
+> *Asegurate de mantener un tono imperativo y directo para que la IA actúe como un Tutor Socrático que guía mediante preguntas sin entregar ejercicios ni códigos resueltos."*
 
 ### B. La "Prueba de Fuego" (Testear el prompt antes de enviarlo)
 Antes de abrir tu Pull Request, probá tu borrador:
@@ -118,5 +129,5 @@ Antes de abrir tu Pull Request, probá tu borrador:
 
 ### C. Reglas de Redacción Efectiva
 * **Usá tono imperativo y directo**: Decí *"No entregues código C puro"*, en lugar de *"Sería preferible evitar C puro"*.
-* **Ejemplos reales en la Sección 6**: En `Prompts de Inicio`, poné preguntas típicas que un alumno le haría al tutor en una clase de consulta.
+* **Ejemplos reales en la Sección 7**: En `Prompts de Inicio`, poné preguntas típicas que un alumno le haría al tutor en una clase de consulta.
 
