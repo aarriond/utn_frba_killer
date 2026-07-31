@@ -45,9 +45,15 @@ def evaluate_prompt_with_gemini(api_key, system_prompt, user_attack_prompt):
         return None
 
 def main():
+    enable_eval = os.environ.get("ENABLE_RED_TEAMING", "false").lower()
+    if enable_eval not in ["true", "1", "yes"]:
+        print("⏸️ Evaluación Red Teaming vía API deshabilitada temporalmente en CI para preservar cuota (ENABLE_RED_TEAMING=false).")
+        print("💡 Para activarla manualmente, setear la variable ENABLE_RED_TEAMING=true o ejecutar el workflow por 'workflow_dispatch'.")
+        sys.exit(0)
+
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("⚠️ GEMINI_API_KEY no encontrada en las variables de entorno. Omitiendo prueba de API (DRY RUN).")
+        print("⚠️ GEMINI_API_KEY no encontrada en las variables de entorno. Omitiendo prueba de API.")
         sys.exit(0)
 
     print("🚀 Iniciando prueba de Red Teaming sobre System Prompts usando Gemini 2.0 Flash...")
