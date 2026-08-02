@@ -7,7 +7,7 @@ Para mantener la calidad y consistencia pedagógica de los System Prompts en **P
 ## 1. Uso Obligatorio de Plantillas de Issues
 
 > 💬 **¿Tenés una duda o propuesta en etapa temprana?**  
-> Antes de abrir un Issue que quizás no prospere, te recomendamos usar el espacio de **[GitHub Discussions](../../discussions)** para consultas generales o ideas informales.
+> Antes de abrir un Issue que quizás no prospere, te recomendamos usar el espacio de **[GitHub Discussions](https://github.com/aarriond/utn_frba_killer/discussions)** para consultas generales o ideas informales.
 
 Antes de enviar código o crear un Pull Request, abrí un **Issue** en GitHub seleccionando una de nuestras plantillas estructuradas (*Issue Templates*):
 

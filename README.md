@@ -116,7 +116,7 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 
 ## 💬 Consultas, Preguntas e Ideas: GitHub Discussions
 
-Si tenés alguna duda general sobre el proyecto, preguntas sobre cómo usar los prompts o querés proponer una idea previa antes de abrir un Issue que quizás no prospere, **utilizá el espacio de [GitHub Discussions](../../discussions)**. 
+Si tenés alguna duda general sobre el proyecto, preguntas sobre cómo usar los prompts o querés proponer una idea previa antes de abrir un Issue que quizás no prospere, **utilizá el espacio de [GitHub Discussions](https://github.com/aarriond/utn_frba_killer/discussions)**. 
 
 Canalizar las consultas informales e inquietudes por Discussions nos ayuda a debatir abiertamente y mantener la sección de **Issues** reservada exclusivamente para tareas concretas y aprobadas.
 
