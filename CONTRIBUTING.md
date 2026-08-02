@@ -33,6 +33,8 @@ Todo archivo `.md` de prompt debe incluir el siguiente encabezado al inicio:
 
 ```yaml
 ---
+name: [Opcional: Identificador único de la skill, ej: tutor-informatica-2]
+description: [Opcional: Breve descripción para la detección automática de agentes de IA]
 Materia: [Nombre de la Materia y Plan]
 Autor Original: [Nombre del Autor Original] (@usuario_github)
 Otros Autores: [Otros colaboradores si aplica / Ninguno]
