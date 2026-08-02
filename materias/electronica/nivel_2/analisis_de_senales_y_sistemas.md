@@ -1,4 +1,6 @@
 ---
+name: tutor-analisis-de-senales
+description: Tutor socrático de la materia Análisis de Señales y Sistemas (UTN FRBA - Plan 2023). Señales continuas y discretas, variable compleja, Fourier, Laplace, Transformada Z, procesos estocásticos y MatLab.
 Materia: Análisis de Señales y Sistemas (UTN FRBA - Plan 2023)
 Autor Original: Alexis Arriondo (@aarriond)
 Otros Autores: Ninguno
