@@ -73,24 +73,26 @@ Al abrir o actualizar un Pull Request, GitHub Actions ejecutará automáticament
 
 ---
 
-## 5. Flujo de Trabajo Git (*GitHub Flow*)
+## 5. Flujo de Trabajo Git (*Git Flow / Branching Model*)
 
-Para mantener el orden y la estabilidad del repositorio frente a múltiples aportes simultáneos, seguimos un modelo basado en ***GitHub Flow***:
+Para mantener el orden y la estabilidad del repositorio frente a múltiples aportes simultáneos, seguimos el siguiente modelo de ramas:
 
-1. **Vincular el Issue a una Rama (*Feature Branch*)**:
+1. **Vincular el Issue a una Rama (*Branching*)**:
    - Abrí un Issue previo usando las plantillas obligatorias.
-   - Creá una rama nueva a partir de la versión en desarrollo usando la convención:
-     - `feature/issue-<número>-<nombre-materia>` (para nuevas materias o características).
-     - `fix/issue-<número>-<nombre-materia>` (para corrección de errores en prompts existentes).
+   - Creá una rama nueva a partir de la versión correspondiente usando la convención:
+     - `feature/issue-<número>-<nombre-materia>` (para incorporar nuevas materias o características extensas).
+     - `fix/issue-<número>-<nombre-materia>` (para corrección urgente de errores o bugs en prompts existentes).
    - *Ejemplo*: `feature/issue-14-fisica-1` o `fix/issue-28-info2-stl`.
 
-2. **Integración mediante Pull Request a `main`**:
-   - Abrí un Pull Request (PR) apuntando a la rama `main`.
-   - Los **GitHub Actions** ejecutarán automáticamente los análisis de estructura y evaluación por LLM sobre tu PR.
+2. **Destino de los Pull Requests (PRs)**:
+   - **Ramas `feature/*`**: Deben abrir su Pull Request apuntando a la rama de liberación activa **`release/*`** (donde se integran y consolidan las nuevas materias y características para su revisión periódica antes del merge oficial).
+   - **Ramas `fix/*`**: Deben abrir su Pull Request apuntando **directamente a `main`**, ya que están destinadas a corregir de forma directa e inmediata bugs o fallas en los prompts vigentes.
+   - Los **GitHub Actions** ejecutarán automáticamente los análisis de estructura y evaluación por LLM sobre cualquier PR.
 
-3. **Publicación Oficial en `main`**:
+3. **Fusión Periódica y Publicación Oficial en `main`**:
    - La rama `main` contiene la versión estable oficial y protegida.
-   - Tras la aprobación del *maintainer* asignado en `CODEOWNERS` y el paso exitoso del CI, tu PR se integrará vía *merge* a `main`.
+   - Las ramas `release/*` se revisan y se fusionan (*merge*) periódicamente hacia `main` una vez consolidadas.
+   - Tras la aprobación del *maintainer* asignado en `CODEOWNERS` y el paso exitoso del CI, los PRs se integran oficialmente a `main`.
 
 ---
 

@@ -131,7 +131,7 @@ Canalizar las consultas informales e inquietudes por Discussions nos ayuda a deb
 * ⚖️ **Política de Fair Use y Derechos de Autor**: Reglas estrictas para no incluir material protegido (libros, parciales textuales, diapositivas o PDFs).
 * 🤖 **Validación Automatizada (CI)**: Explicación de cómo GitHub Actions evalúa automáticamente la estructura y calidad pedagógica del prompt.
 * 💡 **Guía de Meta-Prompting para Principiantes**: Cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador.
-* 🌿 **Flujo de Git (*GitHub Flow*)**: Convención de ramas (`feature/issue-...`) y flujo de integración vía PR a `main`.
+* 🌿 **Flujo de Git**: Convención de ramas (`feature/*` integradas en `release/*` y `fix/*` directo a `main`).
 
 ## Licencia
 
