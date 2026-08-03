@@ -1,8 +1,8 @@
 # Antes que nada, ¿por qué el nombre?
 No tengo una respuesta completa para esta pregunta porque es difícil ponerle un nombre, pero se entiende: en algún momento pensás en que te querés recibir ya... Aunque cueste liquidar materias ;)
 
-# Prompts de Ingeniería UTN FRBA
-Este repositorio es una iniciativa *open-source* para recopilar y estandarizar **System Prompts (contextos de IA)** para las distintas carreras de Ingeniería en la UTN FRBA (Electrónica, Sistemas, Química, Mecánica, Industrial, Civil, Eléctrica, etc.).
+# Contextos de IA para Ingeniería UTN FRBA
+Este repositorio es una iniciativa *open-source* para recopilar y estandarizar **Contextos de IA (System Contexts)** para las distintas carreras de Ingeniería en la UTN FRBA (Electrónica, Sistemas, Química, Mecánica, Industrial, Civil, Eléctrica, etc.).
 
 ## ¿Por qué existe este proyecto?
 
@@ -92,12 +92,12 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 .
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── bugfix.yml           # Plantilla para reportar correcciones en prompts existentes.
+│   │   ├── bugfix.yml           # Plantilla para reportar correcciones en contextos de IA existentes.
 │   │   ├── mejora.yml           # Plantilla para sugerir optimizaciones o ajustes pedagógicos.
 │   │   ├── mito.yml             # Plantilla para aportar mitos y errores frecuentes de la cursada (Sección 3).
 │   │   └── propuesta.yml        # Plantilla para proponer la incorporación de una nueva materia.
 │   ├── workflows/
-│   │   ├── llm_evaluator.yml    # Pipeline de CI para evaluación automatizada de prompts.
+│   │   ├── llm_evaluator.yml    # Pipeline de CI para evaluación automatizada de contextos de IA.
 │   │   └── validar_estructura.yml # Pipeline de CI que valida el cumplimiento de las 7 secciones obligatorias.
 │   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
 ├── materias/
@@ -116,7 +116,7 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 
 ## 💬 Consultas, Preguntas e Ideas: GitHub Discussions
 
-Si tenés alguna duda general sobre el proyecto, preguntas sobre cómo usar los prompts o querés proponer una idea previa antes de abrir un Issue que quizás no prospere, **utilizá el espacio de [GitHub Discussions](https://github.com/aarriond/utn_frba_killer/discussions)**. 
+Si tenés alguna duda general sobre el proyecto, preguntas sobre cómo usar los contextos de IA o querés proponer una idea previa antes de abrir un Issue que quizás no prospere, **utilizá el espacio de [GitHub Discussions](https://github.com/aarriond/utn_frba_killer/discussions)**. 
 
 Canalizar las consultas informales e inquietudes por Discussions nos ayuda a debatir abiertamente y mantener la sección de **Issues** reservada exclusivamente para tareas concretas y aprobadas.
 
@@ -127,9 +127,9 @@ Canalizar las consultas informales e inquietudes por Discussions nos ayuda a deb
 > Los aportes que no sigan las pautas o violen la política de derechos de autor no podrán ser integrados y fallarán los tests automáticos en el CI.
 
 **¿Qué vas a encontrar en [CONTRIBUTING.md](CONTRIBUTING.md)?**
-* 📐 **La Regla de Oro (7 Secciones Obligatorias)**: La estructura exacta que debe cumplir todo prompt para asegurar el rol de tutor socrático.
+* 📐 **La Regla de Oro (7 Secciones Obligatorias)**: La estructura exacta que debe cumplir todo contexto de IA para asegurar el rol de tutor socrático.
 * ⚖️ **Política de Fair Use y Derechos de Autor**: Reglas estrictas para no incluir material protegido (libros, parciales textuales, diapositivas o PDFs).
-* 🤖 **Validación Automatizada (CI)**: Explicación de cómo GitHub Actions evalúa automáticamente la estructura y calidad pedagógica del prompt.
+* 🤖 **Validación Automatizada (CI)**: Explicación de cómo GitHub Actions evalúa automáticamente la estructura y calidad pedagógica del contexto de IA.
 * 💡 **Guía de Meta-Prompting para Principiantes**: Cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador.
 * 🌿 **Flujo de Git**: Convención de ramas (`feature/*` integradas en `release/*` y `fix/*` directo a `main`).
 

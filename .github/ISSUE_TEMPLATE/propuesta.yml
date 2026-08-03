@@ -1,12 +1,12 @@
 name: Propuesta de nueva materia
-description: Sugerir e iniciar la creación de los System Prompts para una nueva materia
+description: Sugerir e iniciar la creación de los Contextos de IA para una nueva materia
 title: "Propuesta: [Nombre de la Materia]"
 labels: ["propuesta", "nueva-materia"]
 body:
   - type: markdown
     attributes:
       value: |
-        ¡Gracias por proponer el prompt para una nueva materia! Por favor completa la siguiente información.
+        ¡Gracias por proponer el contexto de IA para una nueva materia! Por favor completa la siguiente información.
   - type: input
     id: materia
     attributes:

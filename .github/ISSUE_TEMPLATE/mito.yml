@@ -1,12 +1,12 @@
 name: Propuesta de Mito / Error Frecuente
-description: Aportar un mito, error típico o confusión recurrente de la cursada para enriquecer la Sección 3 de un prompt
+description: Aportar un mito, error típico o confusión recurrente de la cursada para enriquecer la Sección 3 de un contexto de IA
 title: "Mito: [Nombre de la Materia] - Breve descripción del error común"
 labels: ["mito", "seccion-3", "comunidad"]
 body:
   - type: markdown
     attributes:
       value: |
-        ¡Gracias por contribuir con la experiencia real de la cursada! La Sección 3 de cada prompt es un documento vivo que se nutre de los errores más comunes cometidos en parciales, TP y finales.
+        ¡Gracias por contribuir con la experiencia real de la cursada! La Sección 3 de cada contexto de IA es un documento vivo que se nutre de los errores más comunes cometidos en parciales, TP y finales.
   - type: input
     id: materia
     attributes:

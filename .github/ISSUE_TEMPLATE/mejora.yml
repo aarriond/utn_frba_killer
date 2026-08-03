@@ -1,5 +1,5 @@
 name: Propuesta de Mejora
-description: Sugerir mejoras o ajustes a un prompt ya existente
+description: Sugerir mejoras o ajustes a un contexto de IA ya existente
 title: "Mejora: [Nombre de la Materia] - Descripción breve"
 labels: ["mejora", "enhancement"]
 body:

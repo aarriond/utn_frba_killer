@@ -1,5 +1,5 @@
 name: Reporte de Error (Bugfix)
-description: Reportar una falla, inconsistencia o atajo detectado en un prompt existente
+description: Reportar una falla, inconsistencia o atajo detectado en un contexto de IA existente
 title: "Bug: [Nombre de la Materia] - Descripción breve"
 labels: ["bug", "necesita-revision"]
 body:
@@ -14,7 +14,7 @@ body:
     id: descripcion_bug
     attributes:
       label: Descripción del problema
-      description: ¿Qué comportamiento indeseado o atajo genera el prompt?
+      description: ¿Qué comportamiento indeseado o atajo genera el contexto de IA?
       placeholder: "La IA devuelve código C puro en lugar de C++ o entrega soluciones completas..."
     validations:
       required: true
@@ -29,6 +29,6 @@ body:
     id: solucion_sugerida
     attributes:
       label: Solución o ajuste sugerido
-      description: ¿Qué regla o sección del prompt debería ser modificada?
+      description: ¿Qué regla o sección del contexto de IA debería ser modificada?
     validations:
       required: false

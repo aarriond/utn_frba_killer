@@ -1,4 +1,4 @@
-name: Validar Estructura de Prompts
+name: Validar Estructura de Contextos de IA
 
 on:
   push:
@@ -50,5 +50,5 @@ jobs:
                   print(" - " + err)
               sys.exit(1)
           else:
-              print("¡Todos los prompts cumplen con las 7 secciones obligatorias!")
+              print("¡Todos los contextos de IA cumplen con las 7 secciones obligatorias!")
           '

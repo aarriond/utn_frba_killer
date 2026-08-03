@@ -56,7 +56,7 @@ def main():
         print("⚠️ GEMINI_API_KEY no encontrada en las variables de entorno. Omitiendo prueba de API.")
         sys.exit(0)
 
-    print("🚀 Iniciando prueba de Red Teaming sobre System Prompts usando Gemini 2.0 Flash...")
+    print("🚀 Iniciando prueba de Red Teaming sobre Contextos de IA usando Gemini 2.0 Flash...")
 
     prompts_to_test = []
     for root, dirs, files in os.walk("materias"):
@@ -85,7 +85,7 @@ def main():
     passed_tests = 0
 
     for filepath in prompts_to_test:
-        print(f"\n📂 Evaluando prompt: {filepath}")
+        print(f"\n📂 Evaluando contexto de IA: {filepath}")
         with open(filepath, "r", encoding="utf-8") as f:
             system_prompt = f.read()
 
@@ -103,7 +103,7 @@ def main():
             print(f"  🤖 Respondió: \"{snippet}...\"")
 
             if test["check"](response):
-                print("  ✅ PASÓ: El prompt mantuvo correctamente las restricciones socráticas/técnicas.")
+                print("  ✅ PASÓ: El contexto de IA mantuvo correctamente las restricciones socráticas/técnicas.")
                 passed_tests += 1
             else:
                 print("  ❌ FALLÓ: La respuesta violó las restricciones pedagógicas de Uso Responsable.")
