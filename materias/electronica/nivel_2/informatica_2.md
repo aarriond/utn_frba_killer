@@ -24,6 +24,13 @@ El foco de la materia está estructurado en los contenidos del programa analíti
   - Estructuras dinámicas de datos tradicionales (Pilas, Colas, Listas) y criterios de uso de la STL en embebidos.
   - Arquitectura Bare-Metal del NXP LPC845: Mapa de memoria, manipulación directa de registros (máscaras de bits, campos de bits, punteros a registros), Switch Matrix (SWM), SysTick Timer e Interrupciones (prioridades, pasaje de datos ISR-Loop).
   - GPIO avanzado: Técnicas de anti-rebote (debounce), teclados matriciales/lineales, microswitchs, multiplexado de displays de 7 segmentos y manejo de Display LCD.
+  - 📋 **Criterios Evaluativos Oficiales para el Parcial 1 (Rúbrica Cátedra)**:
+    - **Gestión de NVIC y Vectorización Simétrica**: El NVIC se habilita únicamente al crear el primer objeto del periférico (en el constructor) y se deshabilita únicamente al destruir el último objeto activo (en el destructor), gestionado mediante un contador estático de instancias.
+    - **Protección de ISRs (`extern "C"`)**: Las ISRs de canal deben protegerse con `extern "C"` para evitar el *name mangling* de C++ y asegurar el enlace correcto con la tabla de vectores de ARM Cortex-M. Las ISRs deben ser mínimas y delegar la lógica en `isrHandler()`.
+    - **Invocación Segura de Callbacks**: Validar siempre `if (m_callback != nullptr)` en el `isrHandler()` antes de invocar el puntero a función.
+    - **Operaciones de Registro (*Read-Modify-Write* y Shift)**: Los *setters* que modifican un campo deben usar máscaras (`&= ~MASK`, `|= (val << POS)`) sin alterar otros bits. La lectura de valores en registros que no inician en el bit 0 requiere aplicar la máscara y el desplazamiento (*shift*) necesario.
+    - **Sobrecarga de Operadores de Comparación**: Sobrecargar `>`, `<`, `==` para comparar el último valor medido contra un `uint16_t` y retornar `bool`, permitiendo evaluar el objeto directamente en condiciones del `main()` sin llamar a un getter.
+    - **Estructura del Integrador e Inicialización**: Objetos declarados con `extern` en las cabeceras/módulos donde se usan e instanciados en `inicializacion.cpp`. Loop principal en `main()` no bloqueante procesando `TmrEventosVencidos()` o `TmrEvent()`.
 * **Eje Parcial 2 (Concurrencia, MDE, Comunicaciones y Analógico)**:
   - Programación Gobernada por Eventos / Máquinas de Estados (MDE): Diagrama de globos, estados compuestos, implementación con `switch-case`, punteros a función, MDE en paralelo y modelado con **uModelFactory**.
   - Comunicación Serie Asincrónica (UART / RS232): Registros asociados, buffers de Rx y Tx mediante colas circulares, transmisión por interrupción/polling.
@@ -63,6 +70,9 @@ El foco de la materia está estructurado en los contenidos del programa analíti
 * **Mito 3: "Las variables compartidas entre ISR y bucle principal no necesitan `volatile`"**: Toda variable o bandera modificada en una interrupción y leída en el `main()` debe ser cualificada como `volatile` para evitar que el optimizador del compilador omita lecturas de memoria.
 * **Mito 4: "Se pueden ejecutar procesos largos dentro de una interrupción (ISR)"**: La rutina de interrupción debe ser ultra rápida (setear banderas, volcar a cola circular). El procesamiento complejo y las MDE deben realizarse en el bucle principal o scheduler.
 * **Mito 5: "La capa de aplicación o MDE puede modificar registros directamente"**: Falso. Los registros del microcontrolador se modifican **exclusivamente en la Capa de Firmware / Driver**. La capa de Aplicación / MDE jamás accede directamente a registros del hardware, sino a través de las Primitivas.
+* **Mito 6: "No hace falta usar `extern "C"` en las ISRs escritas en archivos `.cpp`"**: En C++, las funciones sufren *name mangling*. Sin `extern "C"`, el vector de interrupciones de ARM Cortex-M no encuentra el nombre de la ISR física y el programa cae irrecuperablemente en el `Default_Handler`.
+* **Mito 7: "Habilitar/deshabilitar el NVIC en cada constructor/destructor de instancia"**: El NVIC es global. Si cada objeto habilita/deshabilita el NVIC al destruirse sin verificar otros objetos activos, desactivará la interrupción para todos los demás canales. Debe usarse un contador estático de instancias para habilitar el NVIC solo en la primera y deshabilitarlo solo en la última.
+* **Mito 8: "Invocación directa de callbacks sin validar punteros nulos"**: Si salta una interrupción y el objeto no tiene instalado un callback, desreferenciar un puntero nulo provocará un *Hard Fault* inmediato. Debe verificarse siempre `if (m_callback != nullptr)` antes de llamar a la función.
 
 ---
 
