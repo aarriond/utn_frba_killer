@@ -1,0 +1,44 @@
+name: Auto Crear Rama de Feature para Issue
+
+# Este workflow escucha la apertura o asignación de un Issue en GitHub
+# y genera automáticamente una rama dedicada llamada feature/#issue-<numero>
+
+on:
+  issues:
+    types: [opened, assigned]
+
+jobs:
+  create_branch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Crear rama feature/#issue-<numero>
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          BRANCH_NAME="feature/#issue-${ISSUE_NUMBER}"
+          
+          # Verificar si la rama ya existe en el remoto
+          git fetch origin
+          if git ls-remote --exit-code --heads origin "$BRANCH_NAME"; then
+            echo "ℹ️ La rama $BRANCH_NAME ya existe."
+          else
+            echo "🚀 Creando la rama $BRANCH_NAME..."
+            git checkout -b "$BRANCH_NAME"
+            git push origin "$BRANCH_NAME"
+            
+            # Dejar comentario en el Issue con instrucciones para el desarrollador
+            gh issue comment "$ISSUE_NUMBER" --body "🤖 **Rama creada automáticamente**: \`$BRANCH_NAME\`
+            
+            Para empezar a trabajar en este issue:
+            \`\`\`bash
+            git fetch origin
+            git checkout $BRANCH_NAME
+            \`\`\`"
+          fi

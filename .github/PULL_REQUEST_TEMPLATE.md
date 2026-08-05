@@ -1,9 +1,18 @@
+### Tipo de Pull Request y Rama Destino
+- [ ] **Feature (Nueva Materia / Mejora de Contenido)**: Rama origen `feature/#issue-<id>` $\rightarrow$ **Rama Destino: `release/vX.Y.Z`**
+- [ ] **Hotfix (Corrección Urgente de Bug)**: Rama origen `fix/#issue-<id>` $\rightarrow$ **Rama Destino: `main`**
+
 ### Descripción del Aporte
-*Explicá brevemente qué materia agregaste o qué cambiaste.*
+*Explicá brevemente qué materia agregaste o qué cambiaste y asociá el Issue correspondiente.*
+
+- **Issue Asociado:** Closes #___
 
 ### Checklist Obligatorio
-- [ ] Respeté los títulos exactos de las 7 secciones del estándar.
-- [ ] No incluí enunciados literales de la cátedra ni material con copyright.
-- [ ] Guardé el archivo `.md` en la ruta `materias/<especialidad>/nivel_<N>/` correspondiente.
-- [ ] (Opcional) Issue asociado: #___
-> **Nota:** Al enviar este PR, nuestro sistema de CI/CD ejecutará pruebas automáticas (Red Teaming) sobre tu contexto de IA para validar que cumpla con las directivas de Uso Responsable.
+- [ ] Respeté los títulos exactos de las 7 secciones obligatorias.
+- [ ] Diagramas representados exclusivamente en **Arte ASCII** (sin bloques Mermaid ni sintaxis HTML).
+- [ ] No incluí enunciados literales de la cátedra ni material protegido por derechos de autor.
+- [ ] Ubiqué el archivo `.md` en la ruta `materias/<especialidad>/nivel_<N>/` correspondiente.
+- [ ] Completé los metadatos YAML obligatorios en el Frontmatter.
+
+> **Nota:** Al enviar este PR, la suite de CI/CD ejecutará pruebas automáticas de estructura y Red Teaming vía Gemini API para validar que el contexto de IA cumpla con las directivas socráticas y de Uso Responsable.
+

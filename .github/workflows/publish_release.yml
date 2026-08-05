@@ -1,0 +1,47 @@
+name: Crear Tag y Release Oficial
+
+# Este workflow se ejecuta cuando se realiza un merge a la rama main desde una rama release/vX.Y.Z
+# Genera el Tag de Git correspondiente (ej. v1.2.0) y la Release en GitHub.
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [closed]
+
+jobs:
+  publish_release:
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Extraer Versión de la rama Release
+        id: get_version
+        run: |
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+          # Ejemplo: release/v1.2.0 -> v1.2.0
+          VERSION=$(echo "$BRANCH_NAME" | sed 's/release\///')
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Versión extraída: $VERSION"
+
+      - name: Crear Git Tag y GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ steps.get_version.outputs.VERSION }}
+        run: |
+          echo "🏷️ Creando tag $TAG_NAME..."
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Crear tag y pushear a main
+          git tag -a "$TAG_NAME" -m "Release Oficial $TAG_NAME"
+          git push origin "$TAG_NAME"
+          
+          # Crear Release en GitHub usando GitHub CLI
+          gh release create "$TAG_NAME" \
+            --title "Release $TAG_NAME" \
+            --generate-notes \
+            --target main

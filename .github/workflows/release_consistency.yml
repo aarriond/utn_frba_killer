@@ -1,0 +1,102 @@
+name: Tests de Consistencia de Release
+
+# Este workflow ejecuta pruebas integrales de consistencia cuando se abre un PR
+# desde una rama release/* hacia main al finalizar un sprint.
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  release_checks:
+    # Solo ejecutar si la rama origen es release/*
+    if: startsWith(github.head_ref, 'release/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 1. Validar Formato y 7 Secciones en todos los archivos
+        run: |
+          python -c '
+          import os, sys
+          required_sections = [
+              "1. Identidad y Contexto",
+              "2. Alcance y Límites",
+              "3. Errores Frecuentes y Mitos de la Cátedra",
+              "4. Reglas Pedagógicas y Escalamiento de Pistas",
+              "5. Convenciones de Hardware, Entorno y Formato",
+              "6. Directivas de Uso Responsable y Prevención de Atajos",
+              "7. Prompts de Inicio"
+          ]
+          errors = []
+          for root, dirs, files in os.walk("materias"):
+              for file in files:
+                  if file.endswith(".md"):
+                      filepath = os.path.join(root, file)
+                      with open(filepath, "r", encoding="utf-8") as f:
+                          content = f.read()
+                      for sec in required_sections:
+                          if f"## {sec}" not in content:
+                              errors.append(f"Falta la sección obligatoria ## {sec} en {filepath}")
+          if errors:
+              print("❌ Errores de consistencia estructural encontrados:")
+              for err in errors:
+                  print(" -", err)
+              sys.exit(1)
+          print("✅ Todos los archivos de materias cumplen las 7 secciones obligatorias.")
+          '
+
+      - name: 2. Verificar Nombres Duplicados en Frontmatter YAML
+        run: |
+          python -c '
+          import os, sys, re
+          names = {}
+          errors = []
+          for root, dirs, files in os.walk("materias"):
+              for file in files:
+                  if file.endswith(".md"):
+                      filepath = os.path.join(root, file)
+                      with open(filepath, "r", encoding="utf-8") as f:
+                          content = f.read()
+                      match = re.search(r"^name:\s*(.+)$", content, re.MULTILINE)
+                      if match:
+                          name_val = match.group(1).strip()
+                          if name_val in names:
+                              errors.append(f"Nombre duplicado \"{name_val}\" en {filepath} y {names[name_val]}")
+                          else:
+                              names[name_val] = filepath
+          if errors:
+              print("❌ Errores de nombres duplicados:")
+              for err in errors:
+                  print(" -", err)
+              sys.exit(1)
+          print("✅ Sin colisiones de nombres de metadatos.")
+          '
+
+      - name: 3. Comprobar ausencias de diagramas Mermaid no compatibles (Regla ASCII)
+        run: |
+          python -c '
+          import os, sys
+          errors = []
+          for root, dirs, files in os.walk("materias"):
+              for file in files:
+                  if file.endswith(".md"):
+                      filepath = os.path.join(root, file)
+                      with open(filepath, "r", encoding="utf-8") as f:
+                          content = f.read()
+                      if "```mermaid" in content:
+                          errors.append(f"Se detectó bloque ```mermaid en {filepath}. Debe usarse Arte ASCII en su lugar.")
+          if errors:
+              print("❌ Violaciones a la norma de Arte ASCII encontradas:")
+              for err in errors:
+                  print(" -", err)
+              sys.exit(1)
+          print("✅ Todos los diagramas utilizan formato Arte ASCII compatible.")
+          '

@@ -1,0 +1,31 @@
+name: Auto Limpieza de Ramas Mergeadas
+
+# Este workflow elimina automáticamente las ramas feature/* y release/*
+# una vez que su Pull Request correspondiente es mergeado exitosamente.
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  cleanup:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Eliminar rama remota si es feature/* o release/*
+        run: |
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+          echo "Verificando eliminación para la rama: $BRANCH_NAME"
+          
+          # Proteger main y no borrar si no es una rama efímera
+          if [[ "$BRANCH_NAME" =~ ^feature/.* || "$BRANCH_NAME" =~ ^release/.* || "$BRANCH_NAME" =~ ^fix/.* ]]; then
+            echo "🗑️ Eliminando rama remota $BRANCH_NAME..."
+            git push origin --delete "$BRANCH_NAME" || echo "La rama ya fue eliminada."
+          else
+            echo "ℹ️ La rama $BRANCH_NAME no es de tipo efímero. Omitiendo eliminación."
+          fi

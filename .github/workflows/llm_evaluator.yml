@@ -1,5 +1,9 @@
 name: Evaluador LLM (Red Teaming)
 
+# Este workflow ejecuta pruebas de Red Teaming contra contextos de IA.
+# Por defecto utiliza la API de Google Gemini (Free Tier).
+# Se puede habilitar manualmente o correr en Pull Requests hacia release/* y main.
+
 on:
   workflow_dispatch:
     inputs:
@@ -9,7 +13,7 @@ on:
         type: boolean
         default: true
   pull_request:
-    branches: [ main, beta, 'release/**' ]
+    branches: [ main, 'release/**' ]
     types: [opened, synchronize, reopened]
 
 jobs:
@@ -26,7 +30,15 @@ jobs:
 
       - name: Ejecutar Suite de Red Teaming contra Gemini API
         env:
+          # Proveedor Activo:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          
+          # Proveedores Adicionales (Preparados para cuando agregues sus claves en Secrets):
+          # GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          
           ENABLE_RED_TEAMING: ${{ inputs.enable_api && 'true' || 'false' }}
         run: |
           python tests/test_red_teaming.py
+

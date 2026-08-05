@@ -73,26 +73,36 @@ Al abrir o actualizar un Pull Request, GitHub Actions ejecutará automáticament
 
 ---
 
-## 5. Flujo de Trabajo Git (*Git Flow / Branching Model*)
+## 5. Flujo de Trabajo Git (*Git Flow / Scrum PR Model*)
 
-Para mantener el orden y la estabilidad del repositorio frente a múltiples aportes simultáneos, seguimos el siguiente modelo de ramas:
+Para mantener el orden y la estabilidad del repositorio frente a múltiples aportes simultáneos, **es obligatorio utilizar Pull Requests (PRs)**. La rama `main` y las ramas `release/*` están protegidas y no admiten commits directos.
 
-1. **Vincular el Issue a una Rama (*Branching*)**:
-   - Abrí un Issue previo usando las plantillas obligatorias.
-   - Creá una rama nueva a partir de la versión correspondiente usando la convención:
-     - `feature/issue-<número>-<nombre-materia>` (para incorporar nuevas materias o características extensas).
-     - `fix/issue-<número>-<nombre-materia>` (para corrección urgente de errores o bugs en contextos de IA existentes).
-   - *Ejemplo*: `feature/issue-14-fisica-1` o `fix/issue-28-info2-stl`.
+```text
+  [ ISSUE OPENED ] ──(Auto-crea)──> [ feature/#issue-<id> ] ──(PR)──> [ release/vX.Y.Z ] ──(Sprint Merge PR)──> [ main (Tag Oficial) ]
+  [ BUG URGENTE  ] ────────────────> [ fix/#issue-<id>     ] ──(PR Directo + 1 Aprobador)───────────────────────> [ main ]
+```
+
+### Pasos del Flujo de Trabajo:
+
+1. **Apertura de Issue y Generación Automática de Rama**:
+   - Abrí un Issue utilizando la plantilla correspondiente.
+   - El sistema de automatizaciones (GitHub Actions) creará automáticamente la rama asociada con el patrón **`feature/#issue-<número>`** y dejará un comentario con las instrucciones para hacer `git checkout`.
+   - *Para correcciones urgentes de bugs (Hotfixes)*: Se debe crear manualmente la rama **`fix/#issue-<número>`**.
 
 2. **Destino de los Pull Requests (PRs)**:
-   - **Ramas `feature/*`**: Deben abrir su Pull Request apuntando a la rama de liberación activa **`release/*`** (donde se integran y consolidan las nuevas materias y características para su revisión periódica antes del merge oficial).
-   - **Ramas `fix/*`**: Deben abrir su Pull Request apuntando **directamente a `main`**, ya que están destinadas a corregir de forma directa e inmediata bugs o fallas en los contextos de IA vigentes.
-   - Los **GitHub Actions** ejecutarán automáticamente los análisis de estructura y evaluación por LLM sobre cualquier PR.
+   - **Ramas de características (`feature/#issue-*`)**: Deben abrir su PR apuntando hacia la rama de liberación activa del sprint **`release/vX.Y.Z`** (ej. `release/v1.2.0`). En cada PR se ejecutan automáticamente la validación de estructura y la evaluación con LLM.
+   - **Ramas de corrección urgente (`fix/#issue-*`)**: Deben abrir su PR apuntando **directamente a `main`**. Requieren la aprobación de al menos 1 Maintainer para poder mergearse.
 
-3. **Fusión Periódica y Publicación Oficial en `main`**:
-   - La rama `main` contiene la versión estable oficial y protegida.
-   - Las ramas `release/*` se revisan y se fusionan (*merge*) periódicamente hacia `main` una vez consolidadas.
-   - Tras la aprobación del *maintainer* asignado en `CODEOWNERS` y el paso exitoso del CI, los PRs se integran oficialmente a `main`.
+3. **Consolidación del Sprint (Cada 2 semanas)**:
+   - Al finalizar el Sprint de Scrum, los Maintainers abren un PR de consolidación desde **`release/vX.Y.Z`** hacia **`main`**.
+   - Se ejecuta automáticamente la **Suite de Consistencia de Release** (comprobando ausencia de duplicados, validación de secciones, reglas ASCII sin bloques Mermaid no compatibles e integridad de metadatos).
+   - El PR debe ser aprobado manualmente por un Maintainer.
+
+4. **Publicación y Limpieza Automática**:
+   - Al mergear la rama `release/vX.Y.Z` a `main`:
+     - Se genera automáticamente el **Git Tag** (ej. `v1.2.0`) y la **GitHub Release** con su Changelog.
+     - La rama `release/vX.Y.Z` y las ramas `feature/*` correspondientes se **eliminan automáticamente** del repositorio.
+
 
 ---
 
