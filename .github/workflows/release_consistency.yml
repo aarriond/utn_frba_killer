@@ -4,8 +4,10 @@ name: Tests de Consistencia de Release
 # desde una rama release/* hacia main al finalizar un sprint.
 
 on:
+  push:
+    branches: [ main, beta ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, beta ]
     types: [opened, synchronize, reopened]
 
 jobs:

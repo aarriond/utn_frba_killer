@@ -5,7 +5,7 @@ name: Crear Tag y Release Oficial
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ main, beta ]
     types: [closed]
 
 jobs:

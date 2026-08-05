@@ -2,9 +2,9 @@ name: Validar Estructura de Contextos de IA
 
 on:
   push:
-    branches: [ main, 'release/**' ]
+    branches: [ main, beta, 'release/**' ]
   pull_request:
-    branches: [ main, 'release/**' ]
+    branches: [ main, beta, 'release/**' ]
 
 jobs:
   validar_estructura:
