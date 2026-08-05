@@ -92,8 +92,32 @@ Una vez activado, cada vez que ejecutes `git push`, Git comprobará localmente q
 Para mantener el orden y la estabilidad del repositorio frente a múltiples aportes simultáneos, **es obligatorio utilizar Pull Requests (PRs)**. La rama `main` y las ramas `release/*` están protegidas y no admiten commits directos.
 
 ```text
-  [ ISSUE FEATURE ] ──(Auto-crea)──> [ feature/<id> ] ──(PR)──> [ release/vX.Y.Z ] ──(PR Consolidación)──> [ main (Tag Oficial) ]
-  [ ISSUE BUGFIX  ] ──(Auto-crea)──> [ fix/<id>     ] ──(PR Directo + 1 Aprobador)───────────────────────> [ main ]
+ ┌───────────────────┐
+ │   Apertura Issue  │
+ │ (Feature / Mito)  │
+ └─────────┬─────────┘
+           │ (Auto-creación vía GitHub Actions)
+           ▼
+ ┌───────────────────┐
+ │  feature/<número> │
+ └─────────┬─────────┘
+           │ (Pull Request + Pruebas CI)
+           ▼
+ ┌───────────────────┐
+ │ release/vX.Y.Z    ├─────────────────────────────────────────┐
+ └───────────────────┘                                         │
+   (Rama Liberación)                                           │ (PR Consolidación +
+                                                               │  Suite Release CI)
+ ┌───────────────────┐                                         │
+ │   Apertura Issue  │                                         │
+ │  (Bugfix / Error) │                                         │
+ └─────────┬─────────┘                                         │
+           │ (Auto-creación vía GitHub Actions)                ▼
+           ▼                                           ┌───────────────────┐
+ ┌───────────────────┐                                 │ main              │
+ │    fix/<número>   ├────────────────────────────────►│ (Tag vX.Y.Z       │
+ └───────────────────┘ (PR Directo + 1 Maintainer)     │  + Release GH)    │
+                                                       └───────────────────┘
 ```
 
 ### Pasos del Flujo de Trabajo:
