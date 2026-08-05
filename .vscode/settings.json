@@ -1,0 +1,12 @@
+{
+  "antigravity.permissions.allow": [
+    "command(git)",
+    "command(python -c)"
+  ],
+  "permissions": {
+    "allow": [
+      "command(git)",
+      "command(python -c)"
+    ]
+  }
+}
