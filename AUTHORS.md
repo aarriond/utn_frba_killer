@@ -1,4 +1,4 @@
-# Autores y Colaboradores - Contextos de IA para Ingeniería UTN FRBA
+# Autores y colaboradores - Contextos de IA para ingeniería UTN FRBA
 
 Este repositorio existe gracias al esfuerzo colaborativo de integrantes de la comunidad de **UTN FRBA**.
 
@@ -9,13 +9,16 @@ Este repositorio existe gracias al esfuerzo colaborativo de integrantes de la co
 
 ---
 
-### Contribuidores por Materia
+### Contribuidores por materia
 
 #### 🔹 Ingeniería Electrónica
 * **Informática II** (`materias/electronica/nivel_2/informatica_2.md`):
   - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
   - **Otros Autores**: -
 * **Análisis de Señales y Sistemas** (`materias/electronica/nivel_2/analisis_de_senales_y_sistemas.md`):
+  - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
+  - **Otros Autores**: -
+* **Teoría de Circuitos I** (`materias/electronica/nivel_3/teoria_de_circuitos_1.md`):
   - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
   - **Otros Autores**: -
 

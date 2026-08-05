@@ -112,7 +112,8 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 │   │   └── nivel_2/             # 2º Nivel (ej. analisis_matematico_2.md, fisica_2.md)
 │   ├── electronica/             # Carrera / Especialidad: Ingeniería Electrónica
 │   │   ├── nivel_1/             # (Proyectado - ej. informatica_1.md)
-│   │   └── nivel_2/             # 2º Nivel (ej. informatica_2.md, analisis_de_senales_y_sistemas.md)
+│   │   ├── nivel_2/             # 2º Nivel (ej. informatica_2.md, analisis_de_senales_y_sistemas.md)
+│   │   └── nivel_3/             # 3º Nivel (ej. teoria_de_circuitos_1.md)
 │   ├── sistemas/                # Carrera / Especialidad: Ingeniería en Sistemas (Proyectado)
 │   └── quimica/                 # Carrera / Especialidad: Ingeniería Química (Proyectado)
 ├── tests/
