@@ -90,6 +90,8 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 
 ```text
 .
+├── .githooks/
+│   └── pre-push               # Hook local para validar la estructura antes del git push.
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   │   ├── bugfix.yml           # Plantilla para reportar correcciones en contextos de IA existentes.
@@ -97,8 +99,12 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 │   │   ├── mito.yml             # Plantilla para aportar mitos y errores frecuentes de la cursada (Sección 3).
 │   │   └── propuesta.yml        # Plantilla para proponer la incorporación de una nueva materia.
 │   ├── workflows/
-│   │   ├── llm_evaluator.yml    # Pipeline de CI para evaluación automatizada de contextos de IA.
-│   │   └── validar_estructura.yml # Pipeline de CI que valida el cumplimiento de las 7 secciones obligatorias.
+│   │   ├── auto_cleanup_branches.yml # Limpieza automática de ramas efímeras al mergear PR.
+│   │   ├── create_issue_branch.yml   # Auto-creación de rama feature/#issue al abrir/asignar Issue.
+│   │   ├── llm_evaluator.yml         # Pipeline de CI para evaluación socrática automatizada vía LLM.
+│   │   ├── publish_release.yml       # Generación automática de Git Tag vX.Y.Z y GitHub Release.
+│   │   ├── release_consistency.yml   # Suite de pruebas integrales de consistencia al consolidar el sprint.
+│   │   └── validar_estructura.yml    # Pipeline de CI que valida el cumplimiento de las 7 secciones obligatorias.
 │   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
 ├── materias/
 │   ├── electronica/             # Carrera / Especialidad: Ingeniería Electrónica
@@ -106,9 +112,11 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 │   │   └── nivel_2/             # 2º Nivel (ej. informatica_2.md, analisis_de_senales_y_sistemas.md)
 │   ├── sistemas/                # (Proyectado - ej. sintaxis_y_lenguajes.md)
 │   └── quimica/                 # (Proyectado - ej. quimica_general.md)
+├── tests/
+│   └── test_red_teaming.py      # Suite de evaluación de Red Teaming contra API de LLM.
 ├── AUTHORS.md                  # Registro de autores y colaboradores por materia.
-├── CODEOWNERS                   # Definición de responsables y *maintainers* por módulo.
-├── CONTRIBUTING.md              # Estándares de contribución, regla de las 7 secciones.
+├── CODEOWNERS                   # Definición de responsables y maintainers por módulo.
+├── CONTRIBUTING.md              # Estándares de contribución, regla de las 7 secciones y Git Flow.
 ├── FEEDBACK.md                  # Registro privado de calibraciones de forma de la IA.
 ├── LICENSE                      # Licencia del proyecto (CC BY-NC-ND 4.0).
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
