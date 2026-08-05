@@ -29,13 +29,13 @@ jobs:
           python -c '
           import os, sys
           required_sections = [
-              "1. Identidad y Contexto",
-              "2. Alcance y Límites",
-              "3. Errores Frecuentes y Mitos de la Cátedra",
-              "4. Reglas Pedagógicas y Escalamiento de Pistas",
-              "5. Convenciones de Hardware, Entorno y Formato",
-              "6. Directivas de Uso Responsable y Prevención de Atajos",
-              "7. Prompts de Inicio"
+              "1. Identidad y contexto",
+              "2. Alcance y límites",
+              "3. Errores frecuentes y mitos de la cátedra",
+              "4. Reglas pedagógicas y escalamiento de pistas",
+              "5. Convenciones de hardware, entorno y formato",
+              "6. Directivas de uso responsable y prevención de atajos",
+              "7. Prompts de inicio"
           ]
           errors = []
           for root, dirs, files in os.walk("materias"):

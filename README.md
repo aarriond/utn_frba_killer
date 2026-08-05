@@ -1,14 +1,14 @@
 # Antes que nada, ¿por qué el nombre?
-No tengo una respuesta completa para esta pregunta porque es difícil ponerle un nombre, pero se entiende: en algún momento pensás en que te querés recibir ya... Aunque cueste liquidar materias ;)
+No tengo una respuesta completa para esta pregunta porque es difícil ponerle un nombre a un proyecto nuevo, pero creo que se termina entendiendo: en algún momento pensás en que te querés recibir ya... Aunque cueste liquidar materias ;)
 
-# Contextos de IA para Ingeniería UTN FRBA
+# Contextos de IA para ingeniería UTN FRBA
 Este repositorio es una iniciativa *open-source* para recopilar y estandarizar **Contextos de IA (System Contexts)** para las distintas carreras de Ingeniería en la UTN FRBA (Electrónica, Sistemas, Química, Mecánica, Industrial, Civil, Eléctrica, etc.).
 
 ## ¿Por qué existe este proyecto?
 
 El propósito fundamental de este repositorio es **guiar pedagógicamente al estudiante para evitar que delegue su aprendizaje en la inteligencia artificial**. 
 
-Sin un perfil calibrado, las IAs de propósito general (como ChatGPT, Claude, Gemini o Antigravity IDE) actúan como "generadores de soluciones automáticas" que entregan el código o el ejercicio resuelto de un solo tiro. Esto genera una **falsa sensación de dominio**, perjudicando gravemente al alumno al momento de rendir sus exámenes parciales escritos (que se rinden con lápiz y papel) o defender oralmente sus proyectos en coloquios e instancias evaluativas.
+Sin un perfil calibrado, las IAs de propósito general (como ChatGPT, Claude, Gemini o similares) actúan como "generadores de soluciones automáticas" que entregan el código o el ejercicio resuelto de un solo tiro. Esto genera una **falsa sensación de dominio**, perjudicando gravemente al alumno al momento de rendir sus exámenes parciales escritos (que se rinden con lápiz y papel) o defender oralmente sus proyectos en coloquios e instancias evaluativas.
 
 Al inyectar estos archivos `.md`, transformamos a la IA en un **Tutor Socrático Exigente** que:
 1. **Orienta mediante preguntas clave y pseudocódigo** en lugar de entregar la solución terminada.
@@ -28,15 +28,15 @@ Al inyectar estos archivos `.md`, transformamos a la IA en un **Tutor Socrático
 * **Ingeniería Industrial (*Investigación Operativa* / *Economía de la Empresa*):**
   Guía el planteo de modelos de optimización lineal y análisis de costos paso a paso antes de correr un solver o arrojar un resultado numérico final.
 
-### ⚠️ La Trampa de la "Falsa Solución": ¿Por qué dejar que la IA resuelva todo te perjudica?
+### ⚠️ La trampa de la "falsa solución": ¿Por qué dejar que la IA resuelva todo te perjudica?
 
 Delegar la resolución completa de un ejercicio en la inteligencia artificial genera un fenómeno muy peligroso durante la cursada:
 
-1. **La Ilusión de Comprensión:** Leer una solución generada por la IA se siente fluido y parece fácil ("ah, claro, era así"). Sin embargo, **leer una solución no es lo mismo que aprender a resolverla**. Al no enfrentarte a la hoja en blanco ni cometer los errores típicos del aprendizaje, no desarrollás las conexiones lógicas necesarias.
-2. **El Bloqueo en Exámenes Presenciales:** En la UTN FRBA, los exámenes parciales y finales se rinden **presencialmente en papel (sin computadora)** y los Trabajos Prácticos se defienden **oralmente ante la cátedra**. Si usaste la IA como una muleta para generar respuestas de un tiro, te vas a bloquear en el examen porque nunca ejercitaste el proceso de deducción propio.
-3. **Dependencia vs Criterio Técnico:** Un ingeniero no se destaca por saber copiar código o fórmulas, sino por su **criterio técnico, capacidad de depurar fallas complejas y justificar decisiones de diseño**. Si dejás que la IA piense por vos, pasás de ser un futuro ingeniero a un operador dependiente de una pantalla.
+1. **La ilusión de comprensión:** Leer una solución generada por la IA se siente fluido y parece fácil ("ah, claro, era así"). Sin embargo, **leer una solución no es lo mismo que aprender a resolverla**. Al no enfrentarte a la hoja en blanco ni cometer los errores típicos del aprendizaje, no desarrollás las conexiones lógicas necesarias.
+2. **El bloqueo en exámenes presenciales:** En la UTN FRBA, los exámenes parciales y finales se rinden **presencialmente en papel (sin computadora)** y los trabajos prácticos se defienden **oralmente ante la cátedra**. Si usaste la IA como una muleta para generar respuestas de un tiro, te vas a bloquear en el examen porque nunca ejercitaste el proceso de deducción propio.
+3. **Dependencia vs criterio técnico:** Un ingeniero no se destaca por saber copiar código o fórmulas, sino por su **criterio técnico, capacidad de depurar fallas complejas y justificar decisiones de diseño**. Si dejás que la IA piense por vos, pasás de ser un futuro ingeniero a un operador dependiente de una pantalla.
 
-> 📌 **La Regla de Oro del Repositorio:** Usá la IA como un acelerador de comprensión (para consultar conceptos, pedir pseudocódigo o entender por qué falla un error), **NUNCA para saltearte el proceso de pensar**.
+> 📌 **La regla de oro del repositorio:** Usá la IA como un acelerador de comprensión (para consultar conceptos, pedir pseudocódigo o entender por qué falla un error), **NUNCA para saltearte el proceso de pensar**.
 
 En resumen: **La IA no hace el trabajo por vos; actúa como un tutor experto que te guía para que aprendas, apruebes y seas ingeniero, demostrando que la IA es una herramienta valiosa para ser más eficiente y no que sea prácticamente una dependencia de lo que sabés (o no).**
 
@@ -50,7 +50,7 @@ Un archivo `.md` (**Markdown**) es simplemente un archivo de texto plano formate
 * **Fácil de copiar y reutilizar:** Solo tenés que copiar todo el texto plano e ingresarlo en las instrucciones del sistema de tu IA preferida.
 * **Control transparente en GitHub:** Permite que cualquier estudiante o docente pueda proponer mejoras, corregir errores y seguir el historial de cambios de forma abierta.
 
-## 🚀 Guía de Importación Paso a Paso por Plataforma
+## 🚀 Guía de importación paso a paso por plataforma
 
 Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materias/basicas/nivel_<N>/` o `materias/<especialidad>/nivel_<N>/`) y configuralo en tu herramienta de IA preferida:
 
@@ -82,11 +82,11 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
   3. Cada búsqueda o consulta realizada dentro de esa colección respetará las directivas socráticas.
 
 ### ⚡ Antigravity IDE / VS Code / Cursor
-* **Reglas de Agente / System Instructions:**
+* **Reglas de agente / System Instructions:**
   1. Copiá el archivo `.md` dentro de la carpeta `.gemini/`, `.agent/` o `.cursorrules` de tu espacio de trabajo.
   2. El IDE cargará automáticamente las 7 secciones como instrucciones del sistema para pair-programming.
 
-## Estructura del Repositorio
+## Estructura del repositorio
 
 ```text
 .
@@ -125,23 +125,23 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 └── README.md                    # Documentación general e instrucciones de uso del proyecto.
 ```
 
-## 💬 Consultas, Preguntas e Ideas: GitHub Discussions
+## 💬 Consultas, preguntas e ideas: GitHub Discussions
 
 Si tenés alguna duda general sobre el proyecto, preguntas sobre cómo usar los contextos de IA o querés proponer una idea previa antes de abrir un Issue que quizás no prospere, **utilizá el espacio de [GitHub Discussions](https://github.com/aarriond/utn_frba_killer/discussions)**. 
 
 Canalizar las consultas informales e inquietudes por Discussions nos ayuda a debatir abiertamente y mantener la sección de **Issues** reservada exclusivamente para tareas concretas y aprobadas.
 
-## 🤝 ¿Querés Contribuir? ¡Leé la Guía de Contribución!
+## 🤝 ¿Querés contribuir? ¡Leé la guía de contribución!
 
 > [!IMPORTANT]
 > **Antes de abrir un Issue o Pull Request, es obligatorio leer la [Guía de Contribución (CONTRIBUTING.md)](CONTRIBUTING.md).**  
 > Los aportes que no sigan las pautas o violen la política de derechos de autor no podrán ser integrados y fallarán los tests automáticos en el CI.
 
 **¿Qué vas a encontrar en [CONTRIBUTING.md](CONTRIBUTING.md)?**
-* 📐 **La Regla de Oro (7 Secciones Obligatorias)**: La estructura exacta que debe cumplir todo contexto de IA para asegurar el rol de tutor socrático.
-* ⚖️ **Política de Fair Use y Derechos de Autor**: Reglas estrictas para no incluir material protegido (libros, parciales textuales, diapositivas o PDFs).
-* 🤖 **Validación Automatizada (CI)**: Explicación de cómo GitHub Actions evalúa automáticamente la estructura y calidad pedagógica del contexto de IA.
-* 💡 **Guía de Meta-Prompting para Principiantes**: Cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador.
+* 📐 **La regla de oro (7 secciones obligatorias)**: La estructura exacta que debe cumplir todo contexto de IA para asegurar el rol de tutor socrático.
+* ⚖️ **Política de fair use y derechos de autor**: Reglas estrictas para no incluir material protegido (libros, parciales textuales, diapositivas o PDFs).
+* 🤖 **Validación automatizada (CI)**: Explicación de cómo GitHub Actions evalúa automáticamente la estructura y calidad pedagógica del contexto de IA.
+* 💡 **Guía de meta-prompting para principiantes**: Cómo usar a la misma IA para ayudarte a redactar, probar y calibrar tu borrador.
 * 🌿 **Flujo de Git**: Convención de ramas (`feature/*` integradas en `release/*` y `fix/*` directo a `main`).
 
 ## Licencia
@@ -149,7 +149,5 @@ Canalizar las consultas informales e inquietudes por Discussions nos ayuda a deb
 Este proyecto está bajo la licencia **[Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)](LICENSE)**.
 
 * **Atribución (BY)**: Debes dar crédito apropiado al proyecto original.
-* **No Comercial (NC)**: Queda estrictamente prohibida la comercialización, venta o uso con fines de lucro directos o indirectos de este material.
-* **Sin Derivadas (ND)**: Queda prohibida la redistribución pública de versiones modificadas o alteradas de estos archivos sin autorización expresa de los *maintainers* del repositorio.
-
-
+* **No comercial (NC)**: Queda estrictamente prohibida la comercialización, venta o uso con fines de lucro directos o indirectos de este material.
+* **Sin derivadas (ND)**: Queda prohibida la redistribución pública de versiones modificadas o alteradas de estos archivos sin autorización expresa de los *maintainers* del repositorio.
