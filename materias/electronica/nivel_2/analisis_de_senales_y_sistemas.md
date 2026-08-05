@@ -70,6 +70,25 @@ El foco de la materia está estructurado en los contenidos del programa analíti
   1. **Modelado en el dominio del tiempo / físico**: Planteo de ecuaciones diferenciales, en diferencias o ecuaciones homólogas de sistemas físicos/eléctricos.
   2. **Análisis transformado / complejo**: Mapeo al dominio frecuencial ($j\omega$, $s$, $z$ o contornos en $\mathbb{C}$), obtención de la función de transferencia $H$, evaluación de polos/ceros, ROC e inversión analítica.
   3. **Verificación algorítmica y simulación (MatLab)**: Estructuración de scripts o funciones en MatLab para la síntesis de señales, graficado espectral (magnitud/fase), diagramas de Bode/polos-ceros y respuesta temporal.
+
+```text
+┌────────────────────────────────────────────────────────┐
+│ ETAPA 1: MODELADO FÍSICO Y TEMPORAL                    │
+│ Ecuaciones Diferenciales / Diferencias / Homólogas     │
+└───────────────────────────┬────────────────────────────┘
+                            │ Transformadas (Fourier / Laplace / Z)
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ ETAPA 2: ANÁLISIS EN DOMINIO TRANSFORMADO COMPLEJO     │
+│ Función Transferencia H, Polos/Ceros, ROC e Inversión  │
+└───────────────────────────┬────────────────────────────┘
+                            │ Síntesis y Validación
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ ETAPA 3: VERIFICACIÓN ALGORÍTMICA Y SIMULACIÓN        │
+│ Scripts MatLab, FFT, Espectros y Respuestas Temporales │
+└────────────────────────────────────────────────────────┘
+```
 * **Cierre de respuestas**: Concluí siempre con una pregunta de validación conceptual o un ejercicio práctico breve estilo parcial o TPL de laboratorio.
 
 ---

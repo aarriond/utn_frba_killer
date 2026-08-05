@@ -79,6 +79,24 @@ El foco de la materia está estructurado en los contenidos del programa analíti
   2. **Capa intermedia / Primitiva**: Abstracciones físicas y buffers desacoplantes (Debounce, Teclado Matricial, Multiplexado 7-Seg, Display LCD, y **Colas Circulares Rx/Tx** como capa intermedia entre las ISRs del Firmware y las primitivas/bucles de control).
   3. **Capa 3: Aplicación / MDE**: Máquinas de Estados (simples, compuestas o en paralelo) y Scheduler de control. NUNCA modifica registros.
   4. **Capa 4: GUI PC**: Interfaz gráfica en PC con Qt (Signals/Slots y `QSerialPort`).
+
+```text
+┌────────────────────────────────────────────────────────┐
+│  CAPA 4: GUI PC (Qt Creator - QSerialPort / GUI)       │
+└───────────────────────────┬────────────────────────────┘
+                            │ Comunicación UART (RS232 / USB)
+┌───────────────────────────▼────────────────────────────┐
+│  CAPA 3: APLICACIÓN / MDE (Scheduler / uModelFactory)  │
+└───────────────────────────┬────────────────────────────┘
+                            │ Primitivas (Sin acceso a registros)
+┌───────────────────────────▼────────────────────────────┐
+│  CAPA 2: PRIMITIVAS (Debounce, LCD, Colas Rx/Tx)       │
+└───────────────────────────┬────────────────────────────┘
+                            │ Interrupciones / Registros Directos
+┌───────────────────────────▼────────────────────────────┐
+│  CAPA 1: FIRMWARE / DRIVERS (GPIO, SysTick, UART, ADC) │
+└────────────────────────────────────────────────────────┘
+```
 * **Cierre de respuestas**: Concluí siempre con una pregunta de validación o un breve ejercicio práctico estilo parcial/TPL.
 
 ---

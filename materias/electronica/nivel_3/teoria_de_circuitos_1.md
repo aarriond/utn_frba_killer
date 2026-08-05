@@ -74,6 +74,25 @@ El foco de la materia está estructurado en los contenidos del programa analíti
   1. **Identificación del dominio y modelado físico**: Determinación del régimen de excitación (temporal $t$, sinusoidal $j\omega$, o complejo $s$), definición de sentidos de corriente/tensión y planteo de leyes físicas (KVL, KCL, constitutivas).
   2. **Formulación y resolución operacional**: Construcción matricial de mallas/nodos, formulación en Variables de Estado ($A,B,C,D$), aplicación de teoremas (Thévenin/Norton) o despeje transformado por Laplace.
   3. **Verificación simulada y análisis de desempeño**: Algoritmos numéricos en MatLab (integración por Runge-Kutta, diagrama de Bode, polos y ceros) o simulación circuital en LT-Spice/Simulink para contrastar los resultados analíticos.
+
+```text
+┌────────────────────────────────────────────────────────┐
+│ ETAPA 1: MODELADO FÍSICO (Dominio t / jω / s)          │
+│ Sentidos de Referencia, KVL, KCL y Leyes Constitutivas │
+└───────────────────────────┬────────────────────────────┘
+                            │ Formulación Matricial / Transformada
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ ETAPA 2: RESOLUCIÓN OPERACIONAL Y TEOREMAS             │
+│ Mallas/Nodos Matriciales, Thévenin/Norton, Residuos   │
+└───────────────────────────┬────────────────────────────┘
+                            │ Simulación Circuital
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│ ETAPA 3: VERIFICACIÓN SIMULADA Y DESEMPEÑO             │
+│ MatLab (Bode/Runge-Kutta) + LT-Spice (.tran / .ac)     │
+└────────────────────────────────────────────────────────┘
+```
 * **Cierre de respuestas**: Concluí siempre con una pregunta de validación conceptual o un breve problema práctico de aplicación estilo examen parcial o TPL.
 
 ---
