@@ -21,6 +21,9 @@ Este repositorio existe gracias al esfuerzo colaborativo de integrantes de la co
 * **Teoría de Circuitos I** (`materias/electronica/nivel_3/teoria_de_circuitos_1.md`):
   - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
   - **Otros Autores**: -
+* **Técnicas Digitales I** (`materias/electronica/nivel_3/tecnicas_digitales_1.md`):
+  - **Autor Original**: Alexis Arriondo ([@aarriond](https://github.com/aarriond))
+  - **Otros Autores**: -
 
 ---
 
