@@ -4,6 +4,11 @@ import json
 import urllib.request
 import urllib.error
 
+# Forzar codificación UTF-8 en stdout para prevenir UnicodeEncodeError en consola Windows
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+
 # ==============================================================================
 # PROVEEDOR 1 (ACTIVO POR DEFECTO): GOOGLE GEMINI API (FREE TIER)
 # ==============================================================================
