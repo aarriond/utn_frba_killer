@@ -1,7 +1,9 @@
-name: Auto Crear Rama de Feature para Issue
+name: Auto Crear Rama para Issue
 
 # Este workflow escucha la apertura o asignación de un Issue en GitHub
-# y genera automáticamente una rama dedicada llamada feature/#issue-<numero>
+# y genera automáticamente una rama dedicada:
+# - fix/<numero> si el issue tiene etiqueta 'bug' o 'bugfix'
+# - feature/<numero> para el resto de los casos
 
 on:
   issues:
@@ -17,12 +19,21 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Crear rama feature/#issue-<numero>
+      - name: Determinar tipo y crear rama
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          LABELS: ${{ toJson(github.event.issue.labels) }}
         run: |
-          BRANCH_NAME="feature/#issue-${ISSUE_NUMBER}"
+          # Determinar si es bugfix o feature según etiquetas o título
+          if echo "$LABELS" | grep -iq -E "bug|bugfix" || echo "$ISSUE_TITLE" | grep -iq "^bug:"; then
+            PREFIX="fix"
+          else
+            PREFIX="feature"
+          fi
+          
+          BRANCH_NAME="${PREFIX}/${ISSUE_NUMBER}"
           
           # Verificar si la rama ya existe en el remoto
           git fetch origin
@@ -42,3 +53,4 @@ jobs:
             git checkout $BRANCH_NAME
             \`\`\`"
           fi
+

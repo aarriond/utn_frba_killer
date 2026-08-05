@@ -1,6 +1,6 @@
 ### Tipo de Pull Request y Rama Destino
-- [ ] **Feature (Nueva Materia / Mejora de Contenido)**: Rama origen `feature/#issue-<id>` $\rightarrow$ **Rama Destino: `release/vX.Y.Z`**
-- [ ] **Hotfix (Corrección Urgente de Bug)**: Rama origen `fix/#issue-<id>` $\rightarrow$ **Rama Destino: `main`**
+- [ ] **Feature (Nueva Materia / Mejora / Propuesta)**: Rama origen `feature/<id>` $\rightarrow$ **Rama Destino: `release/vX.Y.Z`**
+- [ ] **Bugfix (Corrección de Bug)**: Rama origen `fix/<id>` $\rightarrow$ **Rama Destino: `main`**
 
 ### Descripción del Aporte
 *Explicá brevemente qué materia agregaste o qué cambiaste y asociá el Issue correspondiente.*
