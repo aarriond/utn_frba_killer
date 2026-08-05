@@ -13,5 +13,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
-#VSCode/
+# VS Code / Entorno local
+.vscode/
 utn_frba_killer.code-workspace
