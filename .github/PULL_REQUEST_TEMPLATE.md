@@ -11,7 +11,7 @@
 - [ ] Respeté los títulos exactos de las 7 secciones obligatorias.
 - [ ] Diagramas representados exclusivamente en **Arte ASCII** (sin bloques Mermaid ni sintaxis HTML).
 - [ ] No incluí enunciados literales de la cátedra ni material protegido por derechos de autor.
-- [ ] Ubiqué el archivo `.md` en la ruta `materias/<especialidad>/nivel_<N>/` correspondiente.
+- [ ] Ubiqué el archivo `.md` en la ruta correspondiente (`materias/basicas/nivel_<N>/` o `materias/<especialidad>/nivel_<N>/`).
 - [ ] Completé los metadatos YAML obligatorios en el Frontmatter.
 
 > **Nota:** Al enviar este PR, la suite de CI/CD ejecutará pruebas automáticas de estructura y Red Teaming vía Gemini API para validar que el contexto de IA cumpla con las directivas socráticas y de Uso Responsable.

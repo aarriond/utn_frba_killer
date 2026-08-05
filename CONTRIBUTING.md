@@ -20,13 +20,15 @@ Antes de enviar código o crear un Pull Request, abrí un **Issue** en GitHub se
 
 ## 2. Ubicación de Archivos, Nombrado y Encabezado Metadatos
 
-Todos los nuevos archivos de contexto de IA deben ubicarse siguiendo strictly la jerarquía:
+Todos los nuevos archivos de contexto de IA deben ubicarse estrictamente siguiendo la jerarquía:
 
 ```text
-materias/<especialidad>/nivel_<N>/<nombre_materia>.md
+materias/basicas/nivel_<N>/<nombre_materia>.md            # Materias comunes a todas las carreras (ej. Análisis I, Física I)
+materias/<especialidad>/nivel_<N>/<nombre_materia>.md     # Materias específicas de especialidad (ej. electronica, sistemas)
 ```
 
-* **Ejemplo**: `materias/electronica/nivel_2/informatica_2.md`
+* **Ejemplo Materia Básica**: `materias/basicas/nivel_1/fisica_1.md`
+* **Ejemplo Materia de Especialidad**: `materias/electronica/nivel_2/informatica_2.md`
 
 ### Encabezado Metadatos (Frontmatter YAML)
 Todo archivo `.md` de contexto de IA debe incluir el siguiente encabezado al inicio:

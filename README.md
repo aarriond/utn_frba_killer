@@ -52,7 +52,7 @@ Un archivo `.md` (**Markdown**) es simplemente un archivo de texto plano formate
 
 ## 🚀 Guía de Importación Paso a Paso por Plataforma
 
-Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materias/<carrera>/nivel_<N>/`) y configuralo en tu herramienta de IA preferida:
+Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materias/basicas/nivel_<N>/` o `materias/<especialidad>/nivel_<N>/`) y configuralo en tu herramienta de IA preferida:
 
 ### 🟢 ChatGPT (OpenAI)
 * **Opción A (Custom GPT - Recomendado):** 
@@ -100,18 +100,21 @@ Copiá el contenido completo del archivo `.md` de tu materia (ubicado en `materi
 │   │   └── propuesta.yml        # Plantilla para proponer la incorporación de una nueva materia.
 │   ├── workflows/
 │   │   ├── auto_cleanup_branches.yml # Limpieza automática de ramas efímeras al mergear PR.
-│   │   ├── create_issue_branch.yml   # Auto-creación de rama feature/#issue al abrir/asignar Issue.
+│   │   ├── create_issue_branch.yml   # Auto-creación de rama fix/<id> o feature/<id> al abrir Issue.
 │   │   ├── llm_evaluator.yml         # Pipeline de CI para evaluación socrática automatizada vía LLM.
 │   │   ├── publish_release.yml       # Generación automática de Git Tag vX.Y.Z y GitHub Release.
-│   │   ├── release_consistency.yml   # Suite de pruebas integrales de consistencia al consolidar el sprint.
+│   │   ├── release_consistency.yml   # Suite de pruebas integrales de consistencia al consolidar release.
 │   │   └── validar_estructura.yml    # Pipeline de CI que valida el cumplimiento de las 7 secciones obligatorias.
 │   └── PULL_REQUEST_TEMPLATE.md # Plantilla guía con checklist para contribuciones vía PR.
 ├── materias/
+│   ├── basicas/                 # Materias Homogéneas / Básicas comunes a todas las carreras (ej. Análisis I, Física I)
+│   │   ├── nivel_1/             # 1º Nivel (ej. analisis_matematico_1.md, fisica_1.md)
+│   │   └── nivel_2/             # 2º Nivel (ej. analisis_matematico_2.md, fisica_2.md)
 │   ├── electronica/             # Carrera / Especialidad: Ingeniería Electrónica
 │   │   ├── nivel_1/             # (Proyectado - ej. informatica_1.md)
 │   │   └── nivel_2/             # 2º Nivel (ej. informatica_2.md, analisis_de_senales_y_sistemas.md)
-│   ├── sistemas/                # (Proyectado - ej. sintaxis_y_lenguajes.md)
-│   └── quimica/                 # (Proyectado - ej. quimica_general.md)
+│   ├── sistemas/                # Carrera / Especialidad: Ingeniería en Sistemas (Proyectado)
+│   └── quimica/                 # Carrera / Especialidad: Ingeniería Química (Proyectado)
 ├── tests/
 │   └── test_red_teaming.py      # Suite de evaluación de Red Teaming contra API de LLM.
 ├── AUTHORS.md                  # Registro de autores y colaboradores por materia.
