@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Git Pre-Push Hook para utn_frba_killer
+# Valida la estructura de los archivos .md de materias antes de enviar el push al servidor.
+
+echo "🔍 [Pre-Push Hook] Validando estructura de materias..."
+
+python -c '
+import os, sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+required_sections = [
+    "1. Identidad y Contexto",
+    "2. Alcance y Límites",
+    "3. Errores Frecuentes y Mitos de la Cátedra",
+    "4. Reglas Pedagógicas y Escalamiento de Pistas",
+    "5. Convenciones de Hardware, Entorno y Formato",
+    "6. Directivas de Uso Responsable y Prevención de Atajos",
+    "7. Prompts de Inicio"
+]
+
+errors = []
+for root, dirs, files in os.walk("materias"):
+    for file in files:
+        if file.endswith(".md"):
+            filepath = os.path.join(root, file)
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read()
+            for sec in required_sections:
+                if f"## {sec}" not in content:
+                    errors.append(f"Falta la sección obligatoria ## {sec} en {filepath}")
+
+if errors:
+    print("\n❌ PUSH RECHAZADO: Se encontraron errores de estructura en los archivos de materias:\n")
+    for err in errors:
+        print("  - " + err)
+    print("\n💡 Por favor corregí estos errores antes de volver a intentar el git push.\n")
+    sys.exit(1)
+
+print("✅ [Pre-Push Hook] Estructura validada correctamente. Continuando push...\n")
+'
+
+if [ $? -ne 0 ]; then
+    exit 1
+fi

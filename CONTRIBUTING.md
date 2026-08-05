@@ -71,6 +71,17 @@ Al abrir o actualizar un Pull Request, GitHub Actions ejecutará automáticament
 
 > **Importante:** Todos los checks del CI deben estar en verde (✅) para que los *maintainers* asignados en `CODEOWNERS` puedan revisar y aprobar el *merge*.
 
+### 💻 Validaciones Locales en Consola (Git Pre-Push Hook)
+
+Para los colaboradores que trabajan 100% en la terminal y desean recibir un **rechazo directo (*push reject*) en su consola** antes de subir commits con errores de estructura a GitHub, pueden activar el hook local ejecutando el siguiente comando una sola vez al clonar el repo:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Una vez activado, cada vez que ejecutes `git push`, Git comprobará localmente que los archivos `.md` de `materias/` cumplan con las 7 secciones obligatorias antes de transmitir los datos al servidor.
+
+
 ---
 
 ## 5. Flujo de Trabajo Git (*Git Flow / Scrum PR Model*)
